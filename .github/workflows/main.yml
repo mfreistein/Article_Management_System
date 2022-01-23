@@ -41,6 +41,6 @@ jobs:
           git --version
           echo Build project with pybuilder
           pip install pybuilder
-          pip install mysql
+          pip3 install mysql-connector
           cd PyBuilder
           pyb
