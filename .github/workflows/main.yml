@@ -40,4 +40,5 @@ jobs:
           echo Is git installed?
           git --version
           echo Build project with pybuilder
+          pip install pybuilder
           pyb
