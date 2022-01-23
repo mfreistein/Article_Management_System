@@ -1,0 +1,182 @@
+ToDos
+-write ReadMe
+-give 5 examples of clean code (single responsibility principle, Use explanatory variables, Avoid logical dependency (Don't write methods which works correctly depending on something else in the same class), Separate concepts vertically (MVC (Model, View, Controller) + Database), polymorphism, docstrings)
+-write up clean code cheat sheet (10 principles)
+-3 UML diagrams
+-DDD diagram
+-DOC STRINGS (working on it)
+-write IDE favourite key shortcuts (cmd-c, cmd-v, alt-spacebar, how to edit several lines at once)
+-(polymorphism if possible)
+-(Prefer dedicated value objects to primitive type)
+-(run metrics)
+-(build management)
+
+
+What I've got:
+-single responsibility principle
+-Use explanatory variables
+-Avoid logical dependency. Don't write methods which works correctly depending on something else in the same class.
+-Separate concepts vertically (MVC (Model, View, Controller) + Database)
+
+
+5 examples of clean code:
+-"for x in range(0, 7): article_suggestion_info_clean.append(article_suggestion_info_raw[x])"
+instead of repeating the process 7 times in 7 lines
+-def assess_article_suggestion(user_id: int, article: list, assessment: str):    
+ def filter_article_suggestions_by_assessment(user_id: int, article_suggestions: list, assessment: str) -> list:                              
+examples of polymorphism. two separate functions before (accept_article_suggestion, reject_article_suggestion)
+
+
+
+CLEAN CODE CHEAT SHEET
+-DOC STRINGS
+-intention revealing interface
+-polymorphism
+-single responsibility principle
+-functions do one thing
+-Use explanatory variables.
+-Prefer dedicated value objects to primitive type.
+-Avoid logical dependency. Don't write methods which works correctly depending on something else in the same class.
+-Separate concepts vertically.
+
+
+
+ISSUES:
+
+
+
+
+"""
+    @staticmethod
+    def filter_unreviewed_article_suggestions(user_id: int, article_suggestions: list) -> list:
+        unreviewed_article_suggestions = []
+        for article_suggestion in article_suggestions:
+            assessments = json.loads(article_suggestion[10])
+            if str(user_id) in assessments['approvals'] or str(user_id) in assessments['rejections']:
+                continue
+            else:
+                unreviewed_article_suggestions.append(article_suggestion)
+        return unreviewed_article_suggestions
+        
+    @staticmethod
+    def filter_reviewed_article_suggestions(user_id: int, article_suggestions: list) -> list:
+        reviewed_article_suggestions = []
+        for article_suggestion in article_suggestions:
+            assessments = json.loads(article_suggestion[10])
+            if str(user_id) in assessments['approvals'] or str(user_id) in assessments['rejections']:
+                reviewed_article_suggestions.append(article_suggestion)
+        return reviewed_article_suggestions
+
+"""
+
+    """    
+    def reviewed_article_suggestions_page(self):
+        self.view.reviewed_article_suggestions_page()
+        article_suggestions = self.model.get_all_article_suggestions()
+        reviewed_article_suggestions = self.model.filter_reviewed_article_suggestions(self.__user_id, article_suggestions)
+        self.view.print_all_article_suggestions_info(reviewed_article_suggestions)
+        user_input_article_id = input(str("Please type an id to proceed: "))
+        for article in reviewed_article_suggestions:
+            article_id = str(article[0])
+            if user_input_article_id == article_id:
+                self.review_suggested_article_page(article)
+        if user_input_article_id == "back":
+            self.article_suggestions_page()
+        self.view.print_invalid_input()
+        self.reviewed_article_suggestions_page()
+    """
+
+
+    """
+def approve_article_suggestion(user_id: int, article_id: int):
+    command_handler.execute("SELECT assessments FROM article_info_conception WHERE id = %s", (article_id,))
+    assessments = command_handler.fetchall()
+    assessments = json.loads(assessments[0][0])
+    assessments['approvals'].append(str(user_id))
+    assessments = json.dumps(assessments)
+    command_handler.execute("UPDATE article_info_conception SET assessments = %s WHERE id = %s",
+                            (assessments, article_id))
+    ams_db.commit()
+
+
+def reject_article_suggestion(user_id: int, article_id: int):
+    command_handler.execute("SELECT assessments FROM article_info_conception WHERE id = %s", (article_id,))
+    assessments = command_handler.fetchall()
+    assessments = json.loads(assessments[0][0])
+    assessments['rejections'].append(str(user_id))
+    assessments = json.dumps(assessments)
+    command_handler.execute("UPDATE article_info_conception SET assessments = %s WHERE id = %s",
+                            (assessments, article_id))
+    ams_db.commit()
+"""
+
+"""def remove_user_assesment_from_article(user_id: int, article_id: int):
+    command_handler.execute("SELECT assessments FROM article_info_conception WHERE id = %s", (article_id,))
+    assessments = command_handler.fetchall()
+    assessments = json.loads(assessments[0][0])
+    if str(user_id) in assessments['rejections']:
+        cleaned_list = [value for value in assessments['rejections'] if value != str(user_id)]
+        assessments['rejections'].clear()
+        assessments['rejections'].extend(cleaned_list)
+    if str(user_id) in assessments['approvals']:
+        cleaned_list = [value for value in assessments['approvals'] if value != str(user_id)]
+        assessments['approvals'].clear()
+        assessments['approvals'].extend(cleaned_list)
+    assessments = json.dumps(assessments)
+    command_handler.execute("UPDATE article_info_conception SET assessments = %s WHERE id = %s",
+                            (assessments, article_id))
+    ams_db.commit()
+"""
+
+
+"""
+def comment_on_article_suggestion(user_id: int, name: str, user_comment: str, article_id: int):
+    command_handler.execute("SELECT comments FROM article_info_conception WHERE id = %s", (article_id,))
+    comments = command_handler.fetchall()
+    comments = json.loads(comments[0][0])
+    addition = [str(user_id), name, user_comment, "2021-11-26 18:23:48"]
+    #addition = [str(user_id), name, user_comment, datetime.datetime.now()]
+    comments['comments'].append(addition)
+    print(comments)
+    json_object = json.dumps(comments)
+    command_handler.execute("UPDATE article_info_conception SET comments = %s WHERE id = %s", (json_object, article_id))
+    ams_db.commit()
+
+
+@staticmethod                                                                                           
+def filter_unreviewed_article_suggestions(user_id: int, article_suggestions: list) -> list:             
+    """                                                                                                 
+    filters out the unassessed article suggestions by user                                              
+    :param user_id, article_suggestions:                                                                
+    :returns: article suggestions not assessed by user                                                  
+    """                                                                                                 
+    return [article_suggestion for article_suggestion in article_suggestions if                         
+            str(user_id) not in json.loads(article_suggestion[10])['approvals'] and                     
+            str(user_id) not in json.loads(article_suggestion[10])['rejections']]                       
+                                                                                                        
+@staticmethod                                                                                           
+def filter_reviewed_article_suggestions(user_id: int, article_suggestions: list) -> list:               
+     """                                                                                                
+     filters out the assessed article suggestions by user                                               
+     :param user_id, article_suggestions:                                                               
+     :returns: article suggestions assessed by user                                                     
+     """                                                                                                
+     return [article_suggestion for article_suggestion in article_suggestions if                        
+            str(user_id) in json.loads(article_suggestion[10])['approvals'] or                          
+            str(user_id) in json.loads(article_suggestion[10])['rejections']]     
+
+
+            #assessments['rejections'].clear()              
+            #assessments['rejections'].extend(cleaned_list) 
+
+            #assessments['approvals'].clear()              
+            #assessments['approvals'].extend(cleaned_list)      
+
+
+            #for x in range(0, 2): article_in_review_info_clean.append(article_in_review_info_raw[x])
+                 
+                                                                                                        
+"""
+
+
+

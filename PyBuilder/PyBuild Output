@@ -1,0 +1,80 @@
+Last login: Fri Jan 21 10:34:33 on ttys000
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+(base) Manuels-MBP:~ manuelfreistein$ cd Desktop/Dev/AMS
+(base) Manuels-MBP:AMS manuelfreistein$ pyb
+PyBuilder version 0.13.4
+Build started at 2022-01-21 10:48:11
+------------------------------------------------------------
+[INFO]  Building PyBuilder version 1.0.dev0
+[INFO]  Executing build in /Users/manuelfreistein/Desktop/Dev/AMS
+[INFO]  Going to execute task publish
+[INFO]  Processing plugin packages 'coverage~=6.0' to be installed with {'upgrade': True}
+[INFO]  Processing plugin packages 'flake8~=4.0' to be installed with {'upgrade': True}
+[INFO]  Processing plugin packages 'pypandoc~=1.4' to be installed with {'upgrade': True}
+[INFO]  Processing plugin packages 'setuptools>=38.6.0' to be installed with {'upgrade': True}
+[INFO]  Processing plugin packages 'twine>=1.15.0' to be installed with {'upgrade': True}
+[INFO]  Processing plugin packages 'unittest-xml-reporting~=3.0.4' to be installed with {'upgrade': True}
+[INFO]  Processing plugin packages 'wheel>=0.34.0' to be installed with {'upgrade': True}
+[INFO]  Creating target 'build' VEnv in '/Users/manuelfreistein/Desktop/Dev/AMS/target/venv/build/cpython-3.9.7.final.0'
+[INFO]  Processing dependency packages 'mysql.connector' to be installed with {}
+[INFO]  Creating target 'test' VEnv in '/Users/manuelfreistein/Desktop/Dev/AMS/target/venv/test/cpython-3.9.7.final.0'
+[INFO]  Requested coverage for tasks: pybuilder.plugins.python.unittest_plugin:run_unit_tests
+[INFO]  Running unit tests
+[INFO]  Executing unit tests from Python modules in /Users/manuelfreistein/Desktop/Dev/AMS/repository/Conception/Unittests
+[INFO]  Executed 4 unit tests
+[INFO]  All unit tests passed.
+[INFO]  Building distribution in /Users/manuelfreistein/Desktop/Dev/AMS/target/dist/PyBuilder-1.0.dev0
+[INFO]  Copying scripts to /Users/manuelfreistein/Desktop/Dev/AMS/target/dist/PyBuilder-1.0.dev0/scripts
+[INFO]  Writing setup.py as /Users/manuelfreistein/Desktop/Dev/AMS/target/dist/PyBuilder-1.0.dev0/setup.py
+[WARN]  Unable to parse module 'Conception.datamodel.Contributor' (file '/Users/manuelfreistein/Desktop/Dev/AMS/repository/Conception/datamodel/Contributor.py') due to syntax error and will be excluded
+[WARN]  Unable to parse module 'Conception.datamodel.Dates' (file '/Users/manuelfreistein/Desktop/Dev/AMS/repository/Conception/datamodel/Dates.py') due to syntax error and will be excluded
+[WARN]  Unable to parse module 'Conception.datamodel.Assessments' (file '/Users/manuelfreistein/Desktop/Dev/AMS/repository/Conception/datamodel/Assessments.py') due to syntax error and will be excluded
+[WARN]  Unable to parse module 'Conception.datamodel.Comments' (file '/Users/manuelfreistein/Desktop/Dev/AMS/repository/Conception/datamodel/Comments.py') due to syntax error and will be excluded
+[INFO]  Collecting coverage information for 'pybuilder.plugins.python.unittest_plugin:run_unit_tests'
+[WARN]  ut_coverage_branch_threshold_warn is 0 and branch coverage will not be checked
+[WARN]  ut_coverage_branch_partial_threshold_warn is 0 and partial branch coverage will not be checked
+[INFO]  Running unit tests
+[INFO]  Executing unit tests from Python modules in /Users/manuelfreistein/Desktop/Dev/AMS/repository/Conception/Unittests
+[INFO]  Executed 4 unit tests
+[INFO]  All unit tests passed.
+[WARN]  Test coverage below 70% for Login:  0%
+[WARN]  Test coverage below 70% for Main:  0%
+[WARN]  Test coverage below 70% for Databases.Contributor_Info_Review: 50%
+[WARN]  Test coverage below 70% for Databases.Article_Info_Conception: 45%
+[WARN]  Test coverage below 70% for Databases.Article_Info_Review: 66%
+[WARN]  Test coverage below 70% for Conception.test_Model:  0%
+[WARN]  Test coverage below 70% for Conception.Controller:  0%
+[WARN]  Test coverage below 70% for Conception.Model: 47%
+[WARN]  Test coverage below 70% for Conception.View:  0%
+[WARN]  Test coverage below 70% for Conception.Exceptions:  0%
+[WARN]  Test coverage below 70% for Conception.Unittests.Model_tests:  0%
+[WARN]  Test coverage below 70% for Conception.datamodel.Users:  0%
+[WARN]  Test coverage below 70% for Conception.datamodel.Article_Conception:  0%
+[WARN]  Overall pybuilder.plugins.python.unittest_plugin.run_unit_tests coverage is below 70%: 15%
+[INFO]  Overall pybuilder.plugins.python.unittest_plugin.run_unit_tests branch coverage is  8%
+[INFO]  Overall pybuilder.plugins.python.unittest_plugin.run_unit_tests partial branch coverage is 100%
+[WARN]  Test coverage below 70% for Login:  0%
+[WARN]  Test coverage below 70% for Main:  0%
+[WARN]  Test coverage below 70% for Databases.Contributor_Info_Review: 50%
+[WARN]  Test coverage below 70% for Databases.Article_Info_Conception: 45%
+[WARN]  Test coverage below 70% for Databases.Article_Info_Review: 66%
+[WARN]  Test coverage below 70% for Conception.test_Model:  0%
+[WARN]  Test coverage below 70% for Conception.Controller:  0%
+[WARN]  Test coverage below 70% for Conception.Model: 47%
+[WARN]  Test coverage below 70% for Conception.View:  0%
+[WARN]  Test coverage below 70% for Conception.Exceptions:  0%
+[WARN]  Test coverage below 70% for Conception.Unittests.Model_tests:  0%
+[WARN]  Test coverage below 70% for Conception.datamodel.Users:  0%
+[WARN]  Test coverage below 70% for Conception.datamodel.Article_Conception:  0%
+[WARN]  Overall PyBuilder coverage is below 70%: 15%
+[INFO]  Overall PyBuilder branch coverage is  8%
+[INFO]  Overall PyBuilder partial branch coverage is 100%
+------------------------------------------------------------
+BUILD FAILED - Test coverage for at least one module is below 70% (site-packages/pybuilder/plugins/python/coverage_plugin.py:154)
+------------------------------------------------------------
+Build finished at 2022-01-21 10:48:29
+Build took 17 seconds (17410 ms)
+(base) Manuels-MBP:AMS manuelfreistein$ 

@@ -1,0 +1,43 @@
+WARNING: '.' not a valid package name; please use only .-separated package names in setup.py
+running clean
+'build/lib' does not exist -- can't clean it
+'build/bdist.macosx-10.9-x86_64' does not exist -- can't clean it
+'build/scripts-3.9' does not exist -- can't clean it
+running sdist
+running egg_info
+creating PyBuilder.egg-info
+writing manifest file 'PyBuilder.egg-info/SOURCES.txt'
+writing manifest file 'PyBuilder.egg-info/SOURCES.txt'
+warning: sdist: standard file not found: should have one of README, README.rst, README.txt, README.md
+
+running check
+warning: Check: missing required meta-data: url
+
+warning: Check: missing meta-data: either (author and author_email) or (maintainer and maintainer_email) should be supplied
+
+creating PyBuilder-1.0.dev0
+creating PyBuilder-1.0.dev0/Conception
+creating PyBuilder-1.0.dev0/Conception/Unittests
+creating PyBuilder-1.0.dev0/PyBuilder.egg-info
+copying Login.py -> PyBuilder-1.0.dev0
+copying Main.py -> PyBuilder-1.0.dev0
+copying __init__.py -> PyBuilder-1.0.dev0
+copying setup.py -> PyBuilder-1.0.dev0
+copying Conception/Controller.py -> PyBuilder-1.0.dev0/Conception
+copying Conception/Exceptions.py -> PyBuilder-1.0.dev0/Conception
+copying Conception/Model.py -> PyBuilder-1.0.dev0/Conception
+copying Conception/View.py -> PyBuilder-1.0.dev0/Conception
+copying Conception/__init__.py -> PyBuilder-1.0.dev0/Conception
+copying Conception/test_Model.py -> PyBuilder-1.0.dev0/Conception
+copying Conception/Unittests/Model_tests.py -> PyBuilder-1.0.dev0/Conception/Unittests
+copying Conception/Unittests/__init__.py -> PyBuilder-1.0.dev0/Conception/Unittests
+copying PyBuilder.egg-info/PKG-INFO -> PyBuilder-1.0.dev0/PyBuilder.egg-info
+copying PyBuilder.egg-info/SOURCES.txt -> PyBuilder-1.0.dev0/PyBuilder.egg-info
+copying PyBuilder.egg-info/dependency_links.txt -> PyBuilder-1.0.dev0/PyBuilder.egg-info
+copying PyBuilder.egg-info/namespace_packages.txt -> PyBuilder-1.0.dev0/PyBuilder.egg-info
+copying PyBuilder.egg-info/top_level.txt -> PyBuilder-1.0.dev0/PyBuilder.egg-info
+copying PyBuilder.egg-info/zip-safe -> PyBuilder-1.0.dev0/PyBuilder.egg-info
+not copying PyBuilder.egg-info/SOURCES.txt (output up-to-date)
+creating dist
+Creating tar archive
+removing 'PyBuilder-1.0.dev0' (and everything under it)

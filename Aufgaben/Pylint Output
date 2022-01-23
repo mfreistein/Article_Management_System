@@ -1,0 +1,211 @@
+Last login: Fri Jan 21 10:06:30 on ttys000
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+(base) Manuels-MBP:~ manuelfreistein$ cd Desktop/Dev/AMS/repository
+(base) Manuels-MBP:repository manuelfreistein$ pylint Main.py
+************* Module Main
+Main.py:8:0: C0305: Trailing newlines (trailing-newlines)
+Main.py:1:0: C0103: Module name "Main" doesn't conform to snake_case naming style (invalid-name)
+Main.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+Main.py:3:0: C0116: Missing function or method docstring (missing-function-docstring)
+
+------------------------------------------------------------------
+Your code has been rated at 0.00/10 (previous run: 0.00/10, +0.00)
+
+(base) Manuels-MBP:repository manuelfreistein$ pylint Login.py
+************* Module Login
+Login.py:23:0: C0301: Line too long (102/100) (line-too-long)
+Login.py:25:0: C0301: Line too long (116/100) (line-too-long)
+Login.py:35:0: C0305: Trailing newlines (trailing-newlines)
+Login.py:1:0: C0103: Module name "Login" doesn't conform to snake_case naming style (invalid-name)
+Login.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+Login.py:4:0: C0116: Missing function or method docstring (missing-function-docstring)
+Login.py:20:12: W0612: Unused variable 'conception' (unused-variable)
+Login.py:27:4: R1705: Unnecessary "else" after "return" (no-else-return)
+
+------------------------------------------------------------------
+Your code has been rated at 6.80/10 (previous run: 6.80/10, +0.00)
+
+(base) Manuels-MBP:repository manuelfreistein$ cd Conception
+(base) Manuels-MBP:Conception manuelfreistein$ pylint View.py
+************* Module View
+View.py:39:0: C0301: Line too long (101/100) (line-too-long)
+View.py:80:0: C0301: Line too long (110/100) (line-too-long)
+View.py:91:0: C0301: Line too long (113/100) (line-too-long)
+View.py:130:0: C0301: Line too long (108/100) (line-too-long)
+View.py:184:0: C0301: Line too long (101/100) (line-too-long)
+View.py:240:0: C0305: Trailing newlines (trailing-newlines)
+View.py:1:0: C0103: Module name "View" doesn't conform to snake_case naming style (invalid-name)
+View.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+View.py:3:0: C0115: Missing class docstring (missing-class-docstring)
+View.py:1:0: W0611: Unused import json (unused-import)
+
+------------------------------------------------------------------
+Your code has been rated at 9.20/10 (previous run: 9.20/10, +0.00)
+
+(base) Manuels-MBP:Conception manuelfreistein$ pylint Model.py
+************* Module Model
+Model.py:14:0: C0301: Line too long (108/100) (line-too-long)
+Model.py:29:0: C0301: Line too long (110/100) (line-too-long)
+Model.py:30:0: C0301: Line too long (103/100) (line-too-long)
+Model.py:33:0: C0301: Line too long (143/100) (line-too-long)
+Model.py:38:0: C0301: Line too long (102/100) (line-too-long)
+Model.py:49:0: C0301: Line too long (115/100) (line-too-long)
+Model.py:53:0: C0301: Line too long (118/100) (line-too-long)
+Model.py:68:0: C0301: Line too long (125/100) (line-too-long)
+Model.py:84:0: C0301: Line too long (101/100) (line-too-long)
+Model.py:119:0: C0301: Line too long (108/100) (line-too-long)
+Model.py:130:0: C0301: Line too long (140/100) (line-too-long)
+Model.py:132:0: C0301: Line too long (110/100) (line-too-long)
+Model.py:133:0: C0301: Line too long (127/100) (line-too-long)
+Model.py:134:0: C0301: Line too long (124/100) (line-too-long)
+Model.py:142:0: C0301: Line too long (109/100) (line-too-long)
+Model.py:149:0: C0301: Line too long (109/100) (line-too-long)
+Model.py:150:0: C0301: Line too long (101/100) (line-too-long)
+Model.py:161:0: C0301: Line too long (103/100) (line-too-long)
+Model.py:162:0: C0301: Line too long (110/100) (line-too-long)
+Model.py:163:0: C0301: Line too long (125/100) (line-too-long)
+Model.py:194:11: C0303: Trailing whitespace (trailing-whitespace)
+Model.py:204:0: C0301: Line too long (104/100) (line-too-long)
+Model.py:210:0: C0301: Line too long (106/100) (line-too-long)
+Model.py:228:0: C0301: Line too long (103/100) (line-too-long)
+Model.py:237:0: C0305: Trailing newlines (trailing-newlines)
+Model.py:1:0: C0103: Module name "Model" doesn't conform to snake_case naming style (invalid-name)
+Model.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+Model.py:8:0: C0115: Missing class docstring (missing-class-docstring)
+Model.py:20:4: R1710: Either all return statements in a function should return an expression, or none of them should. (inconsistent-return-statements)
+Model.py:38:16: C0103: Variable name "x" doesn't conform to snake_case naming style (invalid-name)
+Model.py:38:34: C0321: More than one statement on a single line (multiple-statements)
+Model.py:56:8: R1705: Unnecessary "elif" after "return" (no-else-return)
+Model.py:49:4: R1710: Either all return statements in a function should return an expression, or none of them should. (inconsistent-return-statements)
+Model.py:163:16: C0103: Variable name "x" doesn't conform to snake_case naming style (invalid-name)
+Model.py:163:59: C0321: More than one statement on a single line (multiple-statements)
+Model.py:211:16: C0103: Variable name "x" doesn't conform to snake_case naming style (invalid-name)
+Model.py:211:35: C0321: More than one statement on a single line (multiple-statements)
+Model.py:5:0: C0411: standard import "import json" should be placed before "from Databases import Article_Info_Conception as aic_db" (wrong-import-order)
+Model.py:6:0: C0411: standard import "import datetime" should be placed before "from Databases import Article_Info_Conception as aic_db" (wrong-import-order)
+
+------------------------------------------------------------------
+Your code has been rated at 6.61/10 (previous run: 6.61/10, +0.00)
+
+(base) Manuels-MBP:Conception manuelfreistein$ pylint Controller.py
+************* Module Controller
+Controller.py:13:0: C0301: Line too long (103/100) (line-too-long)
+Controller.py:30:0: C0301: Line too long (102/100) (line-too-long)
+Controller.py:32:0: C0301: Line too long (144/100) (line-too-long)
+Controller.py:48:0: C0301: Line too long (117/100) (line-too-long)
+Controller.py:51:0: C0301: Line too long (144/100) (line-too-long)
+Controller.py:52:0: C0301: Line too long (125/100) (line-too-long)
+Controller.py:55:0: C0301: Line too long (122/100) (line-too-long)
+Controller.py:65:0: C0301: Line too long (111/100) (line-too-long)
+Controller.py:68:0: C0301: Line too long (139/100) (line-too-long)
+Controller.py:69:0: C0301: Line too long (121/100) (line-too-long)
+Controller.py:72:0: C0301: Line too long (120/100) (line-too-long)
+Controller.py:83:0: C0301: Line too long (196/100) (line-too-long)
+Controller.py:84:0: C0301: Line too long (135/100) (line-too-long)
+Controller.py:84:0: C0301: Line too long (135/100) (line-too-long)
+Controller.py:108:0: C0301: Line too long (102/100) (line-too-long)
+Controller.py:122:0: C0301: Line too long (101/100) (line-too-long)
+Controller.py:127:0: C0301: Line too long (132/100) (line-too-long)
+Controller.py:131:0: C0301: Line too long (104/100) (line-too-long)
+Controller.py:132:0: C0301: Line too long (131/100) (line-too-long)
+Controller.py:136:0: C0301: Line too long (116/100) (line-too-long)
+Controller.py:137:0: C0301: Line too long (131/100) (line-too-long)
+Controller.py:141:0: C0301: Line too long (106/100) (line-too-long)
+Controller.py:142:0: C0301: Line too long (131/100) (line-too-long)
+Controller.py:147:0: C0301: Line too long (106/100) (line-too-long)
+Controller.py:148:0: C0301: Line too long (131/100) (line-too-long)
+Controller.py:166:0: C0301: Line too long (109/100) (line-too-long)
+Controller.py:167:0: C0301: Line too long (119/100) (line-too-long)
+Controller.py:171:0: C0301: Line too long (104/100) (line-too-long)
+Controller.py:172:0: C0301: Line too long (119/100) (line-too-long)
+Controller.py:176:0: C0301: Line too long (118/100) (line-too-long)
+Controller.py:177:0: C0301: Line too long (119/100) (line-too-long)
+Controller.py:183:0: C0304: Final newline missing (missing-final-newline)
+Controller.py:1:0: C0103: Module name "Controller" doesn't conform to snake_case naming style (invalid-name)
+Controller.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+Controller.py:3:0: C0115: Missing class docstring (missing-class-docstring)
+
+------------------------------------------------------------------
+Your code has been rated at 7.73/10 (previous run: 7.73/10, +0.00)
+
+(base) Manuels-MBP:Conception manuelfreistein$ pylint View.py
+************* Module View
+View.py:39:0: C0301: Line too long (101/100) (line-too-long)
+View.py:80:0: C0301: Line too long (110/100) (line-too-long)
+View.py:91:0: C0301: Line too long (113/100) (line-too-long)
+View.py:130:0: C0301: Line too long (108/100) (line-too-long)
+View.py:184:0: C0301: Line too long (101/100) (line-too-long)
+View.py:240:0: C0305: Trailing newlines (trailing-newlines)
+View.py:1:0: C0103: Module name "View" doesn't conform to snake_case naming style (invalid-name)
+View.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+View.py:3:0: C0115: Missing class docstring (missing-class-docstring)
+View.py:1:0: W0611: Unused import json (unused-import)
+
+------------------------------------------------------------------
+Your code has been rated at 9.20/10 (previous run: 9.20/10, +0.00)
+
+(base) Manuels-MBP:Conception manuelfreistein$ cd ..
+(base) Manuels-MBP:repository manuelfreistein$ ls
+Conception	Login.py	README.md
+Databases	Main.py		__pycache__
+(base) Manuels-MBP:repository manuelfreistein$ cd Databases
+(base) Manuels-MBP:Databases manuelfreistein$ pylint Users.py
+************* Module Users
+Users.py:12:0: C0304: Final newline missing (missing-final-newline)
+Users.py:1:0: C0103: Module name "Users" doesn't conform to snake_case naming style (invalid-name)
+Users.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+Users.py:1:0: E0401: Unable to import 'mysql.connector' (import-error)
+Users.py:6:0: C0116: Missing function or method docstring (missing-function-docstring)
+Users.py:10:0: C0116: Missing function or method docstring (missing-function-docstring)
+
+------------------------------------
+Your code has been rated at -1.11/10
+
+(base) Manuels-MBP:Databases manuelfreistein$ pylint Contributor_Info_Review.py
+************* Module Contributor_Info_Review
+Contributor_Info_Review.py:11:0: C0301: Line too long (101/100) (line-too-long)
+Contributor_Info_Review.py:15:0: C0301: Line too long (114/100) (line-too-long)
+Contributor_Info_Review.py:1:0: C0103: Module name "Contributor_Info_Review" doesn't conform to snake_case naming style (invalid-name)
+Contributor_Info_Review.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+Contributor_Info_Review.py:1:0: E0401: Unable to import 'mysql.connector' (import-error)
+Contributor_Info_Review.py:6:0: C0116: Missing function or method docstring (missing-function-docstring)
+Contributor_Info_Review.py:10:0: C0116: Missing function or method docstring (missing-function-docstring)
+Contributor_Info_Review.py:14:0: C0116: Missing function or method docstring (missing-function-docstring)
+
+-----------------------------------
+Your code has been rated at 0.00/10
+
+(base) Manuels-MBP:Databases manuelfreistein$ pylint Article_Info_Review.py
+************* Module Article_Info_Review
+Article_Info_Review.py:1:0: C0103: Module name "Article_Info_Review" doesn't conform to snake_case naming style (invalid-name)
+Article_Info_Review.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+Article_Info_Review.py:1:0: E0401: Unable to import 'mysql.connector' (import-error)
+Article_Info_Review.py:6:0: C0116: Missing function or method docstring (missing-function-docstring)
+
+------------------------------------
+Your code has been rated at -3.33/10
+
+(base) Manuels-MBP:Databases manuelfreistein$ pylint Article_Info_Conception.py
+************* Module Article_Info_Conception
+Article_Info_Conception.py:12:0: C0301: Line too long (107/100) (line-too-long)
+Article_Info_Conception.py:21:0: C0301: Line too long (104/100) (line-too-long)
+Article_Info_Conception.py:25:0: C0301: Line too long (117/100) (line-too-long)
+Article_Info_Conception.py:32:0: C0301: Line too long (147/100) (line-too-long)
+Article_Info_Conception.py:1:0: C0103: Module name "Article_Info_Conception" doesn't conform to snake_case naming style (invalid-name)
+Article_Info_Conception.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+Article_Info_Conception.py:1:0: E0401: Unable to import 'mysql.connector' (import-error)
+Article_Info_Conception.py:7:0: C0116: Missing function or method docstring (missing-function-docstring)
+Article_Info_Conception.py:11:0: C0116: Missing function or method docstring (missing-function-docstring)
+Article_Info_Conception.py:15:0: C0116: Missing function or method docstring (missing-function-docstring)
+Article_Info_Conception.py:20:0: C0116: Missing function or method docstring (missing-function-docstring)
+Article_Info_Conception.py:24:0: C0116: Missing function or method docstring (missing-function-docstring)
+Article_Info_Conception.py:28:0: C0116: Missing function or method docstring (missing-function-docstring)
+Article_Info_Conception.py:2:0: C0411: standard import "import json" should be placed before "import mysql.connector as mysql" (wrong-import-order)
+
+-----------------------------------
+Your code has been rated at 1.82/10
+
+(base) Manuels-MBP:Databases manuelfreistein$ 

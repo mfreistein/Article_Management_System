@@ -1,0 +1,36 @@
+WARNING: '.' not a valid package name; please use only .-separated package names in setup.py
+running clean
+'build/lib' does not exist -- can't clean it
+'build/bdist.macosx-10.9-x86_64' does not exist -- can't clean it
+'build/scripts-3.9' does not exist -- can't clean it
+running bdist_wheel
+running build
+running build_py
+creating build
+creating build/lib
+copying __init__.py -> build/lib
+copying Login.py -> build/lib
+copying Main.py -> build/lib
+creating build/lib/Conception
+copying Conception/test_Model.py -> build/lib/Conception
+copying Conception/Controller.py -> build/lib/Conception
+copying Conception/__init__.py -> build/lib/Conception
+copying Conception/Model.py -> build/lib/Conception
+copying Conception/View.py -> build/lib/Conception
+copying Conception/Exceptions.py -> build/lib/Conception
+creating build/lib/Conception/Unittests
+copying Conception/Unittests/Model_tests.py -> build/lib/Conception/Unittests
+copying Conception/Unittests/__init__.py -> build/lib/Conception/Unittests
+/Users/manuelfreistein/Desktop/Dev/FST_Excercise/PyBuilder/.pybuilder/plugins/cpython-3.9.7.final.0/lib/python3.9/site-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+  warnings.warn(
+running install
+running install_lib
+creating build/bdist.macosx-10.9-x86_64
+creating build/bdist.macosx-10.9-x86_64/wheel
+creating build/bdist.macosx-10.9-x86_64/wheel/Conception
+creating build/bdist.macosx-10.9-x86_64/wheel/Conception/Unittests
+running install_egg_info
+running egg_info
+writing manifest file 'PyBuilder.egg-info/SOURCES.txt'
+Copying PyBuilder.egg-info to build/bdist.macosx-10.9-x86_64/wheel/PyBuilder-1.0.dev0-py3.9.egg-info
+running install_scripts

@@ -1,0 +1,4 @@
+Checking /Users/manuelfreistein/Desktop/Dev/FST_Excercise/PyBuilder/target/dist/PyBuilder-1.0.dev0/dist/PyBuilder-1.0.dev0-py3-none-any.whl: PASSED, with warnings
+  warning: `long_description_content_type` missing. defaulting to `text/x-rst`.
+Checking /Users/manuelfreistein/Desktop/Dev/FST_Excercise/PyBuilder/target/dist/PyBuilder-1.0.dev0/dist/PyBuilder-1.0.dev0.tar.gz: PASSED, with warnings
+  warning: `long_description_content_type` missing. defaulting to `text/x-rst`.

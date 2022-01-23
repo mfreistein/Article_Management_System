@@ -1,0 +1,3 @@
+class ArticleAlreadySuggested(Exception):
+    pass
+
