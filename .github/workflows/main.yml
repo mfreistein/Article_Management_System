@@ -42,7 +42,7 @@ jobs:
           echo Build project with pybuilder
           pip install pybuilder
           pip3 install mysql-connector
-          mysql -u root -p"" -h localhost AMS
+          mysql -u root -p -h 127.0.0.1 AMS
           cd PyBuilder
           pyb
           #mysql.server stop
