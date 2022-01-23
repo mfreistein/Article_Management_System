@@ -41,4 +41,5 @@ jobs:
           git --version
           echo Build project with pybuilder
           pip install pybuilder
+          cd PyBuilder
           pyb
