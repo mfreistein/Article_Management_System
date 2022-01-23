@@ -38,5 +38,6 @@ jobs:
           echo Is git installed?
           git --version
           echo Build project with pybuilder
+          cd ..
           pyb
           
