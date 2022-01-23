@@ -45,4 +45,4 @@ jobs:
           mysql -h localhost -P 3306 -u root -p <AMS>
           cd PyBuilder
           pyb
-          mysql.server stop
+          #mysql.server stop
