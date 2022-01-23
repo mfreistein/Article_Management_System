@@ -1,7 +1,7 @@
 import mysql.connector as mysql
 import json
 
-ams_db = mysql.connect(host="db", user="root", password="", database="AMS")
+ams_db = mysql.connect(host="127.0.0.1", user="root", password="", database="AMS")
 command_handler = ams_db.cursor(buffered=True)
 
 def get_all_article_suggestions() -> list:
