@@ -1,6 +1,6 @@
 import mysql.connector as mysql
 
-ams_db = mysql.connect(host="localhost", user="root", password="AMS", database="AMS")
+ams_db = mysql.connect(host="localhost", user="root", password="", database="AMS")
 command_handler = ams_db.cursor(buffered=True)
 
 def get_all_users() -> list:
