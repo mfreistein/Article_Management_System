@@ -39,8 +39,20 @@ jobs:
           echo
           echo Is git installed?
           git --version
-          echo Build project with pybuilder
-          pip install pybuilder
-          pip3 install mysql-connector
-          cd PyBuilder
-          pyb
+
+          
+          
+    env:
+      DB_DATABASE: AMS
+      DB_USER: root
+      DB_PASSWORD:
+
+    steps:
+    - name: Set up MySQL
+      run: |
+      sudo /etc/init.d/mysql start
+      echo Build project with pybuilder
+      pip install pybuilder
+      pip3 install mysql-connector
+      cd PyBuilder
+      pyb
