@@ -22,8 +22,8 @@ jobs:
     
     env:
       DB_DATABASE: AMS
-      DB_USER: ManuelFreistein
-      DB_PASSWORD: AMS
+      DB_USER: root
+      DB_PASSWORD: 
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
