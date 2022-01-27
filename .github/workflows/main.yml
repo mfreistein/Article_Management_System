@@ -19,6 +19,11 @@ jobs:
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
+    
+    env:
+      DB_DATABASE: AMS
+      DB_USER: root
+      DB_PASSWORD: ""
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -39,20 +44,9 @@ jobs:
           echo
           echo Is git installed?
           git --version
-
-          
-          
-    env:
-      DB_DATABASE: AMS
-      DB_USER: root
-      DB_PASSWORD:
-
-    steps:
-    - name: Set up MySQL
-      run: |
-      sudo /etc/init.d/mysql start
-      echo Build project with pybuilder
-      pip install pybuilder
-      pip3 install mysql-connector
-      cd PyBuilder
-      pyb
+          sudo /etc/init.d/mysql start
+          echo Build project with pybuilder
+          pip install pybuilder
+          pip3 install mysql-connector
+          cd PyBuilder
+          pyb
