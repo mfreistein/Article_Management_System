@@ -47,6 +47,6 @@ jobs:
           sudo /etc/init.d/mysql start
           echo Build project with pybuilder
           pip install pybuilder
-          pip3 install mysql-connector
+          pip3 install mysql-connector-python
           cd PyBuilder
           pyb
