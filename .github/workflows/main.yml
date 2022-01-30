@@ -41,12 +41,15 @@ jobs:
           #cd Environment
           #source AMS_env/bin/activate
           #echo
-          echo Pylint Main
+          echo Pip Install
           pip install pylint
-          cd src
-          pylint Main.py
           echo
           echo Pylint Login
+          cd src
           pylint Login.py
           echo
+          #echo Pylint Main
+          #cd src
+          #pylint Main.py
+          #echo
 
