@@ -19,11 +19,6 @@ jobs:
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
-    
-    env:
-      DB_DATABASE: AMS
-      DB_USER: root
-      DB_PASSWORD: 
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -31,22 +26,19 @@ jobs:
       - uses: actions/checkout@v2
 
       # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
+      #- name: Run a one-line script
+      #  run: echo Hello, world!
 
       # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
+      - name: Overview
         run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+          #echo Add other actions to build,
+          #echo test, and deploy your project.
           echo What is in this directory?
           ls
           echo
-          echo Is git installed?
-          git --version
-          sudo /etc/init.d/mysql start
-          echo Build project with pybuilder
-          pip install pybuilder
-          pip3 install mysql-connector-python-rf
-          cd PyBuilder
-          pyb
+          echo Pylint
+          cd src
+          pylint main.py
+          pylint login.py
+
