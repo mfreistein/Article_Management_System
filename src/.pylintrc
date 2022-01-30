@@ -4,4 +4,5 @@
 module-naming-style=any
 
 disable=import-error, 
-	line-too-long
+	line-too-long,
+	missing-class-docstring
