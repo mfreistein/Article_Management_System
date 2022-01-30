@@ -49,7 +49,6 @@ jobs:
           pylint Login.py
           echo
           echo Pylint Main
-          cd src
           pylint Main.py
           echo
 
