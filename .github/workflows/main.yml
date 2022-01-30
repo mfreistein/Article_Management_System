@@ -51,4 +51,10 @@ jobs:
           echo Pylint Main
           pylint Main.py
           echo
+          echo Pylint Conception
+          cd Conception
+          pylint View.py
+          pylint Model.py
+          pyling Controller.py
+          echo
 
