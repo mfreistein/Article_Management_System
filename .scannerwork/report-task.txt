@@ -1,0 +1,6 @@
+projectKey=FST_Excercise
+serverUrl=http://localhost:9000
+serverVersion=9.2.4.50792
+dashboardUrl=http://localhost:9000/dashboard?id=FST_Excercise
+ceTaskId=AX6q9NcEu_2XPiQMHWbW
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AX6q9NcEu_2XPiQMHWbW

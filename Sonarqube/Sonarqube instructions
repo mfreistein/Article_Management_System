@@ -1,0 +1,16 @@
+Sonarqube instructions:
+1. navigate to sonarqube (/Users/manuelfreistein/Dev/Sonarqube/sonarqube-9.2.4.50792/bin/macosx-universal-64)
+2. terminal command: ./sonar.sh start
+3. Login to sonarqube at http://localhost:9000/ username: admin password: admin
+(4. create new project)
+5. set sonar-project.properties (particularly sonar.projectBaseDir=/Users/manuelfreistein/Desktop/Dev/FST_Excercise) in repository
+6. navigate to repository
+7. terminal command:
+sonar-scanner \
+  -Dsonar.projectKey=FST_Excercise \
+  -Dsonar.sources=/Users/manuelfreistein/Desktop/Dev/FST_Excercise/src \
+  -Dsonar.host.url=http://localhost:9000 \
+  -Dsonar.login=993e60f7e12c2113d606f3a331548cef90f52685
+
+8. alternative terminal command: sonar-scanner
+9. View results http://localhost:9000/
