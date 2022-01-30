@@ -69,13 +69,13 @@ class Model:
         :return list filtered_article_suggestions_list:
         """
         if assessment == "un_assessed":
-            return [article_suggestion for article_suggestion in article_suggestions if
-                    str(user_id) not in json.loads(article_suggestion[10])['approvals'] and
-                    str(user_id) not in json.loads(article_suggestion[10])['rejections']]
+            return [article_suggestion for article_suggestion in article_suggestions
+                    if str(user_id) not in json.loads(article_suggestion[10])['approvals']
+                    and str(user_id) not in json.loads(article_suggestion[10])['rejections']]
         if assessment == "assessed":
-            return [article_suggestion for article_suggestion in article_suggestions if
-                    str(user_id) in json.loads(article_suggestion[10])['approvals'] or
-                    str(user_id) in json.loads(article_suggestion[10])['rejections']]
+            return [article_suggestion for article_suggestion in article_suggestions
+                    if str(user_id) in json.loads(article_suggestion[10])['approvals']
+                    or str(user_id) in json.loads(article_suggestion[10])['rejections']]
         return None
 
     @staticmethod
