@@ -5,14 +5,14 @@ It receives user input from the controller.
 
 import json
 import datetime
-from Databases import Article_Info_Conception as aic_db
-from Databases import Contributor_Info_Review as cir_db
-from Databases import Article_Info_Review as air_db
-from Databases import Users as users
-# from src.Databases import Article_Info_Conception as aic_db
-# from src.Databases import Contributor_Info_Review as cir_db
-# from src.Databases import Article_Info_Review as air_db
-# from src.Databases import Users as users
+# from Databases import Article_Info_Conception as aic_db
+# from Databases import Contributor_Info_Review as cir_db
+# from Databases import Article_Info_Review as air_db
+# from Databases import Users as users
+from src.Databases import Article_Info_Conception as aic_db
+from src.Databases import Contributor_Info_Review as cir_db
+from src.Databases import Article_Info_Review as air_db
+from src.Databases import Users as users
 
 class Model:
 
