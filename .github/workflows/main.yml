@@ -46,7 +46,7 @@ jobs:
           echo
           echo Pylint Login
           cd src
-          pylint Login.py
+          pylint login.py
           echo
           #echo Pylint Main
           #cd src
