@@ -1,7 +1,7 @@
 """
 starts the program by calling the Login page
 """
-import Login
+import Login #pylint: disable=import-error
 
 
 def main():

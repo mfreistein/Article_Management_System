@@ -4,8 +4,6 @@ Opens the Login Page and verifies the username and password
 from Databases import Users #pylint: disable=import-error
 from Conception import View, Model, Controller #pylint: disable=import-error
 
-#pylint: disable=line-too-long
-#pylint: disable=invalid-name
 
 
 def login_page():
