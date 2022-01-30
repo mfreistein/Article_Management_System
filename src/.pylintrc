@@ -3,5 +3,5 @@
 # Naming style matching correct module names.
 module-naming-style=any
 
-disable=import-error
-disable=line-too-long
+disable=import-error, 
+	line-too-long
