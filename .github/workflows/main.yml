@@ -55,6 +55,6 @@ jobs:
           cd Conception
           pylint View.py
           pylint Model.py
-          pyling Controller.py
+          pylint Controller.py
           echo
 
