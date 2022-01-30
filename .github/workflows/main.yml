@@ -37,8 +37,14 @@ jobs:
           echo What is in this directory?
           ls
           echo
+          echo Virtual Environment
+          cd Environment
+          source AMS_env/bin/activate
+          echo
           echo Pylint
+          cd ..
           cd src
           pylint main.py
           pylint login.py
+          echo
 
