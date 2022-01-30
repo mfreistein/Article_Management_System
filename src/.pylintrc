@@ -4,3 +4,4 @@
 module-naming-style=any
 
 disable=import-error
+disable=line-too-long
