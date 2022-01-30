@@ -42,7 +42,7 @@ jobs:
           #source AMS_env/bin/activate
           #echo
           echo Pylint
-          pip install pylint
+          #pip install pylint
           cd src
           pylint Main.py
           pylint Login.py
