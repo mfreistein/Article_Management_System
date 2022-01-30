@@ -73,9 +73,9 @@ jobs:
           flake8 Model.py
           flake8 Controller.py
           echo
-          #echo UnitTests
-          #python -m unittest Model_tests.TestModel.test_get_all_article_suggestions
+          echo UnitTests
+          python -m unittest View_tests.TestView.print_invalid_input
           #python -m unittest Model_tests.TestModel.def test_get_article_suggestion_by_id
           #python -m unittest Model_tests.TestModel.test_filter_articles_by_title
           #python -m unittest Model_tests.TestModel.test_filter_contributors_by_last_name
-          #echo
+          echo
