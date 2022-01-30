@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Model_tests.TestModel-20220129162653" tests="4" file="Model_tests.py" time="0.011" timestamp="2022-01-29T16:26:53" failures="0" errors="4" skipped="0">
+	<testcase classname="Model_tests.TestModel" name="test_filter_articles_by_title" time="0.005" timestamp="2022-01-29T16:26:53">
+		<error type="ModuleNotFoundError" message="No module named 'src'"><![CDATA[Traceback (most recent call last):
+  File "/Library/anaconda3/lib/python3.9/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/Library/anaconda3/lib/python3.9/unittest/case.py", line 592, in run
+    self._callTestMethod(testMethod)
+  File "/Library/anaconda3/lib/python3.9/unittest/case.py", line 550, in _callTestMethod
+    method()
+  File "/Users/manuelfreistein/Desktop/Dev/FST_Excercise/src/Conception/Unittests/Model_tests.py", line 33, in test_filter_articles_by_title
+    from src.Conception.Model import Model
+ModuleNotFoundError: No module named 'src'
+]]></error>
+	</testcase>
+	<testcase classname="Model_tests.TestModel" name="test_filter_contributors_by_last_name" time="0.002" timestamp="2022-01-29T16:26:53">
+		<error type="ModuleNotFoundError" message="No module named 'src'"><![CDATA[Traceback (most recent call last):
+  File "/Library/anaconda3/lib/python3.9/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/Library/anaconda3/lib/python3.9/unittest/case.py", line 592, in run
+    self._callTestMethod(testMethod)
+  File "/Library/anaconda3/lib/python3.9/unittest/case.py", line 550, in _callTestMethod
+    method()
+  File "/Users/manuelfreistein/Desktop/Dev/FST_Excercise/src/Conception/Unittests/Model_tests.py", line 42, in test_filter_contributors_by_last_name
+    from src.Conception.Model import Model
+ModuleNotFoundError: No module named 'src'
+]]></error>
+	</testcase>
+	<testcase classname="Model_tests.TestModel" name="test_get_all_article_suggestions" time="0.002" timestamp="2022-01-29T16:26:53">
+		<error type="ImportError" message="attempted relative import with no known parent package"><![CDATA[Traceback (most recent call last):
+  File "/Library/anaconda3/lib/python3.9/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/Library/anaconda3/lib/python3.9/unittest/case.py", line 592, in run
+    self._callTestMethod(testMethod)
+  File "/Library/anaconda3/lib/python3.9/unittest/case.py", line 550, in _callTestMethod
+    method()
+  File "/Users/manuelfreistein/Desktop/Dev/FST_Excercise/src/Conception/Unittests/Model_tests.py", line 5, in test_get_all_article_suggestions
+    from ..Model import Model
+ImportError: attempted relative import with no known parent package
+]]></error>
+	</testcase>
+	<testcase classname="Model_tests.TestModel" name="test_get_article_suggestion_by_id" time="0.002" timestamp="2022-01-29T16:26:53">
+		<error type="ModuleNotFoundError" message="No module named 'src'"><![CDATA[Traceback (most recent call last):
+  File "/Library/anaconda3/lib/python3.9/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/Library/anaconda3/lib/python3.9/unittest/case.py", line 592, in run
+    self._callTestMethod(testMethod)
+  File "/Library/anaconda3/lib/python3.9/unittest/case.py", line 550, in _callTestMethod
+    method()
+  File "/Users/manuelfreistein/Desktop/Dev/FST_Excercise/src/Conception/Unittests/Model_tests.py", line 26, in test_get_article_suggestion_by_id
+    from src.Conception.Model import Model
+ModuleNotFoundError: No module named 'src'
+]]></error>
+	</testcase>
+</testsuite>

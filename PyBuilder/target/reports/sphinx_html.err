@@ -1,18 +1,16 @@
-WARNING: autodoc: failed to import module 'Main' from module 'src'; the following exception was raised:
-No module named 'src'
-WARNING: autodoc: failed to import module 'Login' from module 'src'; the following exception was raised:
-No module named 'src'
-WARNING: autodoc: failed to import module 'Conception.Model' from module 'src'; the following exception was raised:
-No module named 'src'
-WARNING: autodoc: failed to import module 'Conception.Controller' from module 'src'; the following exception was raised:
-No module named 'src'
-WARNING: autodoc: failed to import module 'Conception.View' from module 'src'; the following exception was raised:
-No module named 'src'
-WARNING: autodoc: failed to import module 'Databases.Users' from module 'src'; the following exception was raised:
-No module named 'src'
-WARNING: autodoc: failed to import module 'Databases.Contributor_Info_Review' from module 'src'; the following exception was raised:
-No module named 'src'
-WARNING: autodoc: failed to import module 'Databases.Article_Info_Review' from module 'src'; the following exception was raised:
-No module named 'src'
-WARNING: autodoc: failed to import module 'Databases.Article_Info_Conception' from module 'src'; the following exception was raised:
-No module named 'src'
+WARNING: autodoc: failed to import module 'Main'; the following exception was raised:
+No module named 'mysql'
+WARNING: autodoc: failed to import module 'Login'; the following exception was raised:
+No module named 'mysql'
+WARNING: autodoc: failed to import module 'Model' from module 'Conception'; the following exception was raised:
+No module named 'mysql'
+WARNING: autodoc: failed to import module 'Controller' from module 'Conception'; the following exception was raised:
+No module named 'mysql'
+WARNING: autodoc: failed to import module 'Users' from module 'Databases'; the following exception was raised:
+No module named 'mysql'
+WARNING: autodoc: failed to import module 'Contributor_Info_Review' from module 'Databases'; the following exception was raised:
+No module named 'mysql'
+WARNING: autodoc: failed to import module 'Article_Info_Review' from module 'Databases'; the following exception was raised:
+No module named 'mysql'
+WARNING: autodoc: failed to import module 'Article_Info_Conception' from module 'Databases'; the following exception was raised:
+No module named 'mysql'

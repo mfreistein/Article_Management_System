@@ -14,7 +14,7 @@ import os
 import sys
 #sys.path.insert(0, os.path.abspath('.'))
 sys.path.insert(0, os.path.abspath('../../src'))
-sys.path.insert(0, os.path.abspath('../../src/Conception'))
+#sys.path.insert(0, os.path.abspath('../../src/Conception'))
 
 
 
@@ -32,8 +32,8 @@ author = 'Manuel Freistein'
 # ones.
 extensions = ['sphinx.ext.autodoc', 'sphinx.ext.coverage', 'sphinx.ext.napoleon']
 
-autodoc_mock_imports = ['Login', 'Conception', 'mysql', 'json', 'Databases', 'datetime' ]
-
+#autodoc_mock_imports = ['Login', 'Conception', 'mysql', 'json', 'Databases', 'datetime' ]
+#autodoc_mock_imports = ['mysql'] 
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']

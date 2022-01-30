@@ -1,16 +1,21 @@
+"""
+The controller responds to the user input and performs interactions on the data model objects.
+The controller receives the input, optionally validates it and then passes the input to the model.
+"""
+
 import Login
 
-class Controller:
 
+class Controller():
     def __init__(self, model, view, user_id):
         self.model = model
         self.view = view
         self.__user_id = user_id
         self.controller_dashboard()
 
-
     def controller_dashboard(self):
-        """Calls the General Editors Dashboard, processes the users input and navigates to next page"""
+        """Calls the General Editors Dashboard,
+        processes the users input and navigates to next page"""
         self.view.general_editors_dashboard()
         user_decision = input()
         if user_decision == "1":
@@ -27,9 +32,12 @@ class Controller:
             self.controller_dashboard()
 
     def controller_article_suggestions_page(self):
-        """Calls the Article Suggestions page, processes the users input and navigates to next page"""
+        """Calls the Article Suggestions page, processes
+        the users input and navigates to next page"""
         article_suggestions = self.model.get_all_article_suggestions()
-        unreviewed_article_suggestions = self.model.filter_article_suggestions_by_assessment(self.__user_id, article_suggestions, "un_assessed")
+        unreviewed_article_suggestions = self.model.filter_article_suggestions_by_assessment(self.__user_id,
+                                                                                             article_suggestions,
+                                                                                             "un_assessed")
         self.view.article_suggestions_page(len(unreviewed_article_suggestions))
         user_decision = input()
         if user_decision == "1":
@@ -45,14 +53,19 @@ class Controller:
             self.controller_article_suggestions_page()
 
     def controller_new_article_suggestions_page(self):
-        """Calls the New/Unreviewed Article Suggestions page, processes the users input and navigates to next page"""
+        """Calls the New/Unreviewed Article Suggestions page,
+        processes the users input and navigates to next page"""
         self.view.new_article_suggestions_page()
         article_suggestions = self.model.get_all_article_suggestions()
-        unreviewed_article_suggestions = self.model.filter_article_suggestions_by_assessment(self.__user_id, article_suggestions, "un_assessed")
-        unreviewed_article_suggestions = self.model.format_article_suggestions_info_for_print(unreviewed_article_suggestions)
+        unreviewed_article_suggestions = self.model.filter_article_suggestions_by_assessment(self.__user_id,
+                                                                                             article_suggestions,
+                                                                                             "un_assessed")
+        unreviewed_article_suggestions = self.model.format_article_suggestions_info_for_print(
+            unreviewed_article_suggestions)
         self.view.print_all_article_suggestions_info(unreviewed_article_suggestions)
         user_input_article_id = input(str("Please type an id to proceed: "))
-        requested_article = self.model.get_article_suggestion_by_id(user_input_article_id, unreviewed_article_suggestions)
+        requested_article = self.model.get_article_suggestion_by_id(user_input_article_id,
+                                                                    unreviewed_article_suggestions)
         if user_input_article_id == "back":
             self.controller_article_suggestions_page()
         elif requested_article is not None:
@@ -62,11 +75,15 @@ class Controller:
             self.controller_new_article_suggestions_page()
 
     def controller_reviewed_article_suggestions_page(self):
-        """Calls the Reviewed Article Suggestions page, processes the users input and navigates to next page"""
+        """Calls the Reviewed Article Suggestions page,
+        processes the users input and navigates to next page"""
         self.view.reviewed_article_suggestions_page()
         article_suggestions = self.model.get_all_article_suggestions()
-        reviewed_article_suggestions = self.model.filter_article_suggestions_by_assessment(self.__user_id, article_suggestions, "assessed")
-        reviewed_article_suggestions = self.model.format_article_suggestions_info_for_print(reviewed_article_suggestions)
+        reviewed_article_suggestions = self.model.filter_article_suggestions_by_assessment(self.__user_id,
+                                                                                           article_suggestions,
+                                                                                           "assessed")
+        reviewed_article_suggestions = self.model.format_article_suggestions_info_for_print(
+            reviewed_article_suggestions)
         self.view.print_all_article_suggestions_info(reviewed_article_suggestions)
         user_input_article_id = input(str("Please type an id to proceed: "))
         requested_article = self.model.get_article_suggestion_by_id(user_input_article_id, reviewed_article_suggestions)
@@ -80,8 +97,11 @@ class Controller:
 
     def controller_review_suggested_article_page(self, article: list):
         """Calls the Review page, processes the users input and navigates to next page
-        :param list article: clean article info [id, title, outline, wordcount, suggested author full name, suggested assignee  full name, suggested_reviewer full name, creator username, comments]
-         that the user chose on previous page (controller_reviewed_article_suggestions_page/controller_new_article_suggestions_page)"""
+        :param list article: clean article info
+        [id, title, outline, wordcount, suggested author full name, suggested assignee  full name,
+         suggested_reviewer full name, creator username, comments]
+         that the user chose on previous page
+         (controller_reviewed_article_suggestions_page/controller_new_article_suggestions_page)"""
         self.view.review_suggested_article_page()
         self.view.print_all_article_suggestions_info([article])
         user_decision = input(str("Please type in a number here: "))
@@ -105,7 +125,8 @@ class Controller:
             self.controller_review_suggested_article_page(article)
 
     def controller_suggest_new_article_page(self):
-        """Calls the Suggest New Article page, processes the users input and navigates to next page"""
+        """Calls the Suggest New Article page,
+        processes the users input and navigates to next page"""
         user_article_suggestion_info = self.view.suggest_new_article_page()
         decision = input(str("Are you sure you want to suggest this article? (Y/N)"))
         if decision == "Y":
@@ -119,33 +140,39 @@ class Controller:
             self.controller_suggest_new_article_page()
 
     def controller_articles_review_page(self):
-        """Calls the Articles in Review page, processes the users input and navigates to next page"""
+        """Calls the Articles in Review page,
+        processes the users input and navigates to next page"""
         articles_in_review = self.model.get_all_articles_in_review()
         self.view.articles_review_page(len(articles_in_review))
         user_decision = input()
         if user_decision == "1":
-            self.view.print_all_articles_review_information(self.model.format_articles_in_review_info_for_print(articles_in_review))
+            self.view.print_all_articles_review_information(
+                self.model.format_articles_in_review_info_for_print(articles_in_review))
             self.controller_articles_review_page()
         elif user_decision == "2":
             requested_title = input(str("Please input a title: "))
             filtered_articles = self.model.filter_articles_by_title(requested_title, articles_in_review)
-            self.view.print_all_articles_review_information(self.model.format_articles_in_review_info_for_print(filtered_articles))
+            self.view.print_all_articles_review_information(
+                self.model.format_articles_in_review_info_for_print(filtered_articles))
             self.controller_articles_review_page()
         elif user_decision == "3":
             requested_author_last_name = input(str("Please input a person by last name: "))
             filtered_articles = self.model.filter_articles_by_author(requested_author_last_name, articles_in_review)
-            self.view.print_all_articles_review_information(self.model.format_articles_in_review_info_for_print(filtered_articles))
+            self.view.print_all_articles_review_information(
+                self.model.format_articles_in_review_info_for_print(filtered_articles))
             self.controller_articles_review_page()
         elif user_decision == "4":
             requested_region = input(str("Please input a region: "))
             filtered_articles = self.model.filter_articles_by_region(requested_region, articles_in_review)
-            self.view.print_all_articles_review_information(self.model.format_articles_in_review_info_for_print(filtered_articles))
+            self.view.print_all_articles_review_information(
+                self.model.format_articles_in_review_info_for_print(filtered_articles))
             self.controller_articles_review_page()
         elif user_decision == "5":
             print("Status: open/author_invited/initial_check/review/author_revisions)")
             requested_status = input(str("Please input a status: "))
             filtered_articles = self.model.filter_articles_by_status(requested_status, articles_in_review)
-            self.view.print_all_articles_review_information(self.model.format_articles_in_review_info_for_print(filtered_articles))
+            self.view.print_all_articles_review_information(
+                self.model.format_articles_in_review_info_for_print(filtered_articles))
             self.controller_articles_review_page()
         elif user_decision == "6":
             self.controller_dashboard()
@@ -154,7 +181,8 @@ class Controller:
             self.controller_articles_review_page()
 
     def controller_contributors_page(self):
-        """Calls the Contributors page, processes the users input and navigates to next page"""
+        """Calls the Contributors page,
+        processes the users input and navigates to next page"""
         contributors = self.model.get_all_contributors()
         self.view.contributors_page(len(contributors))
         action = input(str("Please type a number to proceed: "))

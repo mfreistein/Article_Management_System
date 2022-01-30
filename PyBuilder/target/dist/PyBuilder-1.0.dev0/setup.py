@@ -44,8 +44,7 @@ if __name__ == '__main__':
         scripts = [],
         packages = [
             '.',
-            'Conception',
-            'Conception.Unittests'
+            'Conception'
         ],
         namespace_packages = [],
         py_modules = [],

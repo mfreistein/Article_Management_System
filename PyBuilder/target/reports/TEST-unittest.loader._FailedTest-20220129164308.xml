@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="unittest.loader._FailedTest-20220129164308" tests="1" file="unittest/loader.py" time="0.005" timestamp="2022-01-29T16:43:08" failures="0" errors="1" skipped="0">
+	<testcase classname="unittest.loader._FailedTest" name="Model_tests" time="0.005" timestamp="2022-01-29T16:43:08">
+		<error type="ImportError" message="Failed to import test module: Model_tests
+Traceback (most recent call last):
+  File &quot;/Library/anaconda3/lib/python3.9/unittest/loader.py&quot;, line 154, in loadTestsFromName
+    module = __import__(module_name)
+  File &quot;/Users/manuelfreistein/Desktop/Dev/FST_Excercise/src/Conception/Unittests/Model_tests.py&quot;, line 2, in &lt;module&gt;
+    import src.Conception.Model
+ModuleNotFoundError: No module named 'src'
+"><![CDATA[Traceback (most recent call last):
+  File "/Library/anaconda3/lib/python3.9/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/Library/anaconda3/lib/python3.9/unittest/case.py", line 592, in run
+    self._callTestMethod(testMethod)
+  File "/Library/anaconda3/lib/python3.9/unittest/case.py", line 550, in _callTestMethod
+    method()
+  File "/Library/anaconda3/lib/python3.9/unittest/loader.py", line 34, in testFailure
+    raise self._exception
+ImportError: Failed to import test module: Model_tests
+Traceback (most recent call last):
+  File "/Library/anaconda3/lib/python3.9/unittest/loader.py", line 154, in loadTestsFromName
+    module = __import__(module_name)
+  File "/Users/manuelfreistein/Desktop/Dev/FST_Excercise/src/Conception/Unittests/Model_tests.py", line 2, in <module>
+    import src.Conception.Model
+ModuleNotFoundError: No module named 'src'
+
+]]></error>
+	</testcase>
+</testsuite>

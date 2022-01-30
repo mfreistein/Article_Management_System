@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Model_tests.TestModel-20220130115413" tests="4" file="Model_tests.py" time="0.073" timestamp="2022-01-30T11:54:14" failures="0" errors="4" skipped="0">
+	<testcase classname="Model_tests.TestModel" name="test_filter_articles_by_title" time="0.061" timestamp="2022-01-30T11:54:14">
+		<error type="SyntaxError" message="invalid syntax (Users.py, line 6)"><![CDATA[Traceback (most recent call last):
+  File "/Library/anaconda3/lib/python3.9/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/Library/anaconda3/lib/python3.9/unittest/case.py", line 592, in run
+    self._callTestMethod(testMethod)
+  File "/Library/anaconda3/lib/python3.9/unittest/case.py", line 550, in _callTestMethod
+    method()
+  File "/Users/manuelfreistein/Desktop/Dev/FST_Excercise/src/Conception/Model_tests.py", line 24, in test_filter_articles_by_title
+    import Model
+  File "/Users/manuelfreistein/Desktop/Dev/FST_Excercise/src/Conception/Model.py", line 11, in <module>
+    from Databases import Users as users
+  File "/Users/manuelfreistein/Desktop/Dev/FST_Excercise/src/Databases/Users.py", line 6
+    from 
+         ^
+SyntaxError: invalid syntax
+]]></error>
+	</testcase>
+	<testcase classname="Model_tests.TestModel" name="test_filter_contributors_by_last_name" time="0.003" timestamp="2022-01-30T11:54:14">
+		<error type="SyntaxError" message="invalid syntax (Users.py, line 6)"><![CDATA[Traceback (most recent call last):
+  File "/Library/anaconda3/lib/python3.9/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/Library/anaconda3/lib/python3.9/unittest/case.py", line 592, in run
+    self._callTestMethod(testMethod)
+  File "/Library/anaconda3/lib/python3.9/unittest/case.py", line 550, in _callTestMethod
+    method()
+  File "/Users/manuelfreistein/Desktop/Dev/FST_Excercise/src/Conception/Model_tests.py", line 30, in test_filter_contributors_by_last_name
+    import Model
+  File "/Users/manuelfreistein/Desktop/Dev/FST_Excercise/src/Conception/Model.py", line 11, in <module>
+    from Databases import Users as users
+  File "/Users/manuelfreistein/Desktop/Dev/FST_Excercise/src/Databases/Users.py", line 6
+    from 
+         ^
+SyntaxError: invalid syntax
+]]></error>
+	</testcase>
+	<testcase classname="Model_tests.TestModel" name="test_get_all_article_suggestions" time="0.003" timestamp="2022-01-30T11:54:14">
+		<error type="SyntaxError" message="invalid syntax (Users.py, line 6)"><![CDATA[Traceback (most recent call last):
+  File "/Library/anaconda3/lib/python3.9/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/Library/anaconda3/lib/python3.9/unittest/case.py", line 592, in run
+    self._callTestMethod(testMethod)
+  File "/Library/anaconda3/lib/python3.9/unittest/case.py", line 550, in _callTestMethod
+    method()
+  File "/Users/manuelfreistein/Desktop/Dev/FST_Excercise/src/Conception/Model_tests.py", line 6, in test_get_all_article_suggestions
+    import Model
+  File "/Users/manuelfreistein/Desktop/Dev/FST_Excercise/src/Conception/Model.py", line 11, in <module>
+    from Databases import Users as users
+  File "/Users/manuelfreistein/Desktop/Dev/FST_Excercise/src/Databases/Users.py", line 6
+    from 
+         ^
+SyntaxError: invalid syntax
+]]></error>
+	</testcase>
+	<testcase classname="Model_tests.TestModel" name="test_get_article_suggestion_by_id" time="0.006" timestamp="2022-01-30T11:54:14">
+		<error type="SyntaxError" message="invalid syntax (Users.py, line 6)"><![CDATA[Traceback (most recent call last):
+  File "/Library/anaconda3/lib/python3.9/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/Library/anaconda3/lib/python3.9/unittest/case.py", line 592, in run
+    self._callTestMethod(testMethod)
+  File "/Library/anaconda3/lib/python3.9/unittest/case.py", line 550, in _callTestMethod
+    method()
+  File "/Users/manuelfreistein/Desktop/Dev/FST_Excercise/src/Conception/Model_tests.py", line 18, in test_get_article_suggestion_by_id
+    import Model
+  File "/Users/manuelfreistein/Desktop/Dev/FST_Excercise/src/Conception/Model.py", line 11, in <module>
+    from Databases import Users as users
+  File "/Users/manuelfreistein/Desktop/Dev/FST_Excercise/src/Databases/Users.py", line 6
+    from 
+         ^
+SyntaxError: invalid syntax
+]]></error>
+	</testcase>
+</testsuite>

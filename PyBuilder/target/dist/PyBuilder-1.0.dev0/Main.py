@@ -1,11 +1,14 @@
+"""
+starts the program by calling the Login page
+"""
 import Login
+
 
 def main():
     """
-    MAIN METHOD
+    starts the program by calling the Login page
     """
     Login.login_page()
 
 
 main()
-

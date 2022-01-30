@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Model_tests.TestModel-20220129173056" tests="4" file="Model_tests.py" time="0.066" timestamp="2022-01-29T17:30:57" failures="0" errors="4" skipped="0">
+	<testcase classname="Model_tests.TestModel" name="test_filter_articles_by_title" time="0.058" timestamp="2022-01-29T17:30:57">
+		<error type="ModuleNotFoundError" message="No module named 'src'"><![CDATA[Traceback (most recent call last):
+  File "/Library/anaconda3/lib/python3.9/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/Library/anaconda3/lib/python3.9/unittest/case.py", line 592, in run
+    self._callTestMethod(testMethod)
+  File "/Library/anaconda3/lib/python3.9/unittest/case.py", line 550, in _callTestMethod
+    method()
+  File "/Users/manuelfreistein/Desktop/Dev/FST_Excercise/src/Conception/Model_tests.py", line 24, in test_filter_articles_by_title
+    import Model
+  File "/Users/manuelfreistein/Desktop/Dev/FST_Excercise/src/Conception/Model.py", line 10, in <module>
+    import src.Databases.Contributor_Info_Review as cir_db
+ModuleNotFoundError: No module named 'src'
+]]></error>
+	</testcase>
+	<testcase classname="Model_tests.TestModel" name="test_filter_contributors_by_last_name" time="0.003" timestamp="2022-01-29T17:30:57">
+		<error type="ModuleNotFoundError" message="No module named 'src'"><![CDATA[Traceback (most recent call last):
+  File "/Library/anaconda3/lib/python3.9/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/Library/anaconda3/lib/python3.9/unittest/case.py", line 592, in run
+    self._callTestMethod(testMethod)
+  File "/Library/anaconda3/lib/python3.9/unittest/case.py", line 550, in _callTestMethod
+    method()
+  File "/Users/manuelfreistein/Desktop/Dev/FST_Excercise/src/Conception/Model_tests.py", line 30, in test_filter_contributors_by_last_name
+    import Model
+  File "/Users/manuelfreistein/Desktop/Dev/FST_Excercise/src/Conception/Model.py", line 10, in <module>
+    import src.Databases.Contributor_Info_Review as cir_db
+ModuleNotFoundError: No module named 'src'
+]]></error>
+	</testcase>
+	<testcase classname="Model_tests.TestModel" name="test_get_all_article_suggestions" time="0.003" timestamp="2022-01-29T17:30:57">
+		<error type="ModuleNotFoundError" message="No module named 'src'"><![CDATA[Traceback (most recent call last):
+  File "/Library/anaconda3/lib/python3.9/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/Library/anaconda3/lib/python3.9/unittest/case.py", line 592, in run
+    self._callTestMethod(testMethod)
+  File "/Library/anaconda3/lib/python3.9/unittest/case.py", line 550, in _callTestMethod
+    method()
+  File "/Users/manuelfreistein/Desktop/Dev/FST_Excercise/src/Conception/Model_tests.py", line 6, in test_get_all_article_suggestions
+    import Model
+  File "/Users/manuelfreistein/Desktop/Dev/FST_Excercise/src/Conception/Model.py", line 10, in <module>
+    import src.Databases.Contributor_Info_Review as cir_db
+ModuleNotFoundError: No module named 'src'
+]]></error>
+	</testcase>
+	<testcase classname="Model_tests.TestModel" name="test_get_article_suggestion_by_id" time="0.003" timestamp="2022-01-29T17:30:57">
+		<error type="ModuleNotFoundError" message="No module named 'src'"><![CDATA[Traceback (most recent call last):
+  File "/Library/anaconda3/lib/python3.9/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/Library/anaconda3/lib/python3.9/unittest/case.py", line 592, in run
+    self._callTestMethod(testMethod)
+  File "/Library/anaconda3/lib/python3.9/unittest/case.py", line 550, in _callTestMethod
+    method()
+  File "/Users/manuelfreistein/Desktop/Dev/FST_Excercise/src/Conception/Model_tests.py", line 18, in test_get_article_suggestion_by_id
+    import Model
+  File "/Users/manuelfreistein/Desktop/Dev/FST_Excercise/src/Conception/Model.py", line 10, in <module>
+    import src.Databases.Contributor_Info_Review as cir_db
+ModuleNotFoundError: No module named 'src'
+]]></error>
+	</testcase>
+</testsuite>

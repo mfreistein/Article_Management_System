@@ -1,9 +1,15 @@
+"""
+The model is responsible for managing the data of the application.
+It receives user input from the controller.
+"""
+
+import json
+import datetime
 from Databases import Article_Info_Conception as aic_db
 from Databases import Contributor_Info_Review as cir_db
 from Databases import Article_Info_Review as air_db
 from Databases import Users as users
-import json
-import datetime
+
 
 class Model:
 
@@ -11,8 +17,8 @@ class Model:
     def get_all_article_suggestions() -> list:
         """
         Gets full list of suggested articles from Database "Article_Info_Conception" and returns it
-        :returns: [(id, title, outline, wordcount, suggested_author, suggested_assignee, suggested_reviewer,
-        creator, date_created, date_last_updated, assessments, comments)]
+        :returns: [(id, title, outline, wordcount, suggested_author, suggested_assignee,
+        suggested_reviewer, creator, date_created, date_last_updated, assessments, comments)]
         """
         return aic_db.get_all_article_suggestions()
 
@@ -22,22 +28,27 @@ class Model:
         for article in article_suggestions:
             if article_id == str(article[0]):
                 return article
+        return None
 
     @staticmethod
     def format_article_suggestions_info_for_print(article_suggestions_info_raw: list) -> list:
         """
-        Reformats the full article suggestion information to relevant information for Console Output print out
-        :param list articles_in_review_info_raw: full article suggestions information from sql database
+        Reformats the full article suggestion information to relevant information
+        for Console Output print out
+        :param article_suggestions_info_raw:
+        full article suggestions information from sql database
         [(id, title, outline, wordcount, suggested_author, suggested_assignee, suggested_reviewer,
         creator_id, date_created, date_last_updated, assessments, comments])
-        :return list: [[id, title, outline, wordcount, suggested_author, suggested assignee, suggested_reviewer, creator_full_name, comments],]
+        :return list: [[id, title, outline, wordcount, suggested_author, suggested assignee,
+        suggested_reviewer, creator_full_name, comments],]
         """
         article_suggestions_info_clean = []
         for article_suggestion_info_raw in article_suggestions_info_raw:
             article_suggestion_info_clean = []
-            for x in range(0, 7): article_suggestion_info_clean.append(article_suggestion_info_raw[x])
+            for info in range(0, 7):
+                article_suggestion_info_clean.append(article_suggestion_info_raw[info])
             creator_info = users.get_user_info_from_id(article_suggestion_info_raw[7])[0]
-            creator_full_name = str(creator_info[1])+ " " +str(creator_info[2])
+            creator_full_name = str(creator_info[1]) + " " + str(creator_info[2])
             article_suggestion_info_clean.append(creator_full_name)
             comments = article_suggestion_info_raw[11]
             comments = json.loads(comments)
@@ -50,22 +61,28 @@ class Model:
         """
         Takes a user_id, a list of article suggestions and a type of assessment and filters out the
         "assessed" or "un_assessed" articles depending on the parameter "assessment"
-        :param int user_id, list article_suggestions, str assessment: assessment is either "assessed" or "un_assessed"
+        :param assessment:
+        :param article_suggestions:
+        :param user_id:
+        :param int user_id, list article_suggestions,
+        str assessment: assessment is either "assessed" or "un_assessed"
         :return list filtered_article_suggestions_list:
         """
         if assessment == "un_assessed":
             return [article_suggestion for article_suggestion in article_suggestions if
                     str(user_id) not in json.loads(article_suggestion[10])['approvals'] and
                     str(user_id) not in json.loads(article_suggestion[10])['rejections']]
-        elif assessment == "assessed":
+        if assessment == "assessed":
             return [article_suggestion for article_suggestion in article_suggestions if
                     str(user_id) in json.loads(article_suggestion[10])['approvals'] or
                     str(user_id) in json.loads(article_suggestion[10])['rejections']]
+        return None
 
     @staticmethod
     def assess_article_suggestion(user_id: int, article: list, assessment: str):
         """
-        takes user_id, article and "approve" or "reject" string. adds user_id to assessments list "approvals" or "rejections"
+        takes user_id, article and "approve" or "reject" string.
+        adds user_id to assessments list "approvals" or "rejections"
         sends assessments to Database "Article_Info_Conception"
         :param int user_id, list article, str assessment:
         """
@@ -81,7 +98,8 @@ class Model:
     @staticmethod
     def remove_user_assessment_from_article(user_id: int, article: list):
         """
-        takes user_id and article. removes user_id from assessments list "rejections" and "approvals"
+        takes user_id and article.
+        removes user_id from assessments list "rejections" and "approvals"
         and sends assessments to Database "Article_Info_Conception"
         :param int user_id, list article:
         """
@@ -116,7 +134,8 @@ class Model:
     @staticmethod
     def add_article_suggestion(article_suggestion_info: list):
         """
-        Gets new article suggestion info, formats comments for Database, adds dates created and last updated
+        Gets new article suggestion info, formats comments for Database,
+        adds dates created and last updated
         and sends it to Database "Article_Info_Conception" in tuple:
         (id, title, outline, wordcount, suggested_author, suggested_assignee, suggested_reviewer,
         creator, date_created, date_last_updated, assessments, comments)
@@ -127,27 +146,35 @@ class Model:
         else:
             date_now = datetime.datetime.now()
             user_info = users.get_user_info_from_id(article_suggestion_info[6])
-            comment_form = [article_suggestion_info[6], user_info[0][3], article_suggestion_info[7], date_now.strftime("%Y-%m-%d %H:%M:%S")]
+            comment_form = [article_suggestion_info[6], user_info[0][3],
+                            article_suggestion_info[7], date_now.strftime("%Y-%m-%d %H:%M:%S")]
             comments = json.dumps({"comments": [comment_form]})
-        tuple_vals = (article_suggestion_info[0], article_suggestion_info[1], int(article_suggestion_info[2]),
-                article_suggestion_info[3], article_suggestion_info[4], article_suggestion_info[5], article_suggestion_info[6],
-                date_now.strftime("%Y-%m-%d %H:%M:%S"), date_now.now().strftime("%Y-%m-%d %H:%M:%S"), assessments, comments)
+        tuple_vals = \
+            (article_suggestion_info[0], article_suggestion_info[1],
+                int(article_suggestion_info[2]), article_suggestion_info[3],
+                article_suggestion_info[4], article_suggestion_info[5],
+                article_suggestion_info[6], date_now.strftime("%Y-%m-%d %H:%M:%S"),
+                date_now.now().strftime("%Y-%m-%d %H:%M:%S"), assessments, comments)
         aic_db.add_article_suggestion(tuple_vals)
 
     @staticmethod
     def get_all_articles_in_review() -> list:
         """
         Gets full list of articles in review from Database "Article_Info_Review" and returns it
-        :return list: [(id, title, assignee_id, author_id, first_reviewer_id, second_reviewer_id,
-        date_created, date_last_updated, due_date, type, edition, status, outline, wordcount, region, theme])
+        :return list:
+        [(id, title, assignee_id, author_id, first_reviewer_id, second_reviewer_id,
+        date_created, date_last_updated, due_date, type, edition, status,
+        outline, wordcount, region, theme])
         """
         return air_db.get_all_articles_in_review()
 
     @staticmethod
     def format_articles_in_review_info_for_print(articles_in_review_info_raw: list) -> list:
         """
-        Reformats the full article in review information to relevant information for Console Output print out
-        :param list articles_in_review_info_raw: full article in review information from sql database
+        Reformats the full article in review information
+        to relevant information for Console Output print out
+        :param list articles_in_review_info_raw:
+        full article in review information from sql database
         :return list: [[id, title, assignee, author, first_reviewer, last updated, type, edition,
         status, outline, wordcount, region, theme],]
         """
@@ -155,12 +182,13 @@ class Model:
         for article_in_review_info_raw in articles_in_review_info_raw:
             article_in_review_info_clean = []
             assignee_info = cir_db.get_contributor_info_from_id(article_in_review_info_raw[2])[0]
-            article_in_review_info_clean.append(str(assignee_info[1])+ " " +str(assignee_info[2]))
+            article_in_review_info_clean.append(str(assignee_info[1]) + " " + str(assignee_info[2]))
             author_info = cir_db.get_contributor_info_from_id(article_in_review_info_raw[3])[0]
-            article_in_review_info_clean.append(str(author_info[1])+ " " +str(author_info[2]))
+            article_in_review_info_clean.append(str(author_info[1]) + " " + str(author_info[2]))
             first_reviewer_info = cir_db.get_contributor_info_from_id(article_in_review_info_raw[4])[0]
-            article_in_review_info_clean.append(str(first_reviewer_info[1])+ " " +str(first_reviewer_info[2]))
-            for x in [0, 1, 6, 9, 10, 11, 12, 13, 14, 15]: article_in_review_info_clean.append(article_in_review_info_raw[x])
+            article_in_review_info_clean.append(str(first_reviewer_info[1]) + " " + str(first_reviewer_info[2]))
+            for info in [0, 1, 6, 9, 10, 11, 12, 13, 14, 15]:
+                article_in_review_info_clean.append(article_in_review_info_raw[info])
             articles_in_review_info_clean.append(article_in_review_info_clean)
         return articles_in_review_info_clean
 
@@ -191,7 +219,7 @@ class Model:
 
     @staticmethod
     def get_all_contributors() -> list:
-        """                                                                                                   
+        """
         Gets full list of contributors from Database "Contributor_Info_Review" and returns it
         :return list: [(id, first_name, last_name, email, institution, role,])
         """
@@ -201,14 +229,15 @@ class Model:
     def format_contributors_info_for_print(contributors_info_raw) -> list:
         """
         Combines first and last name in contributors information list
-        :param list articles_in_review_info_raw: [(id, first_name, last_name, email, institution, role])
+        :param list articles_in_review_info_raw:
+        [(id, first_name, last_name, email, institution, role])
         :return list: [id, full_name, email, institution, role]
         """
         contributors_info_clean = []
         for contributor_info_raw in contributors_info_raw:
-            contributor_info_clean = []
-            contributor_info_clean.append(str(contributor_info_raw[1])+ " " +str(contributor_info_raw[2]))
-            for x in [0, 3, 4, 5]: contributor_info_clean.append(contributor_info_raw[x])
+            contributor_info_clean = [str(contributor_info_raw[1]) + " " + str(contributor_info_raw[2])]
+            for info in [0, 3, 4, 5]:
+                contributor_info_clean.append(contributor_info_raw[info])
             contributors_info_clean.append(contributor_info_clean)
         return contributors_info_clean
 
@@ -225,13 +254,5 @@ class Model:
     @staticmethod
     def filter_contributors_by_institution(requested_institution: str, contributors: list) -> list:
         """filters for institution from a list of contributors"""
-        return [contributor for contributor in contributors if requested_institution == contributor[4]]
-
-
-
-
-
-
-
-
-
+        return \
+            [contributor for contributor in contributors if requested_institution == contributor[4]]

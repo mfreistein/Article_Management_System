@@ -1,0 +1,4 @@
+Collecting mysql.connector
+  Using cached mysql_connector-2.2.9-cp39-cp39-macosx_10_9_x86_64.whl
+Installing collected packages: mysql.connector
+Successfully installed mysql.connector-2.2.9

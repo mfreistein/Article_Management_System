@@ -17,7 +17,6 @@ warning: Check: missing meta-data: either (author and author_email) or (maintain
 
 creating PyBuilder-1.0.dev0
 creating PyBuilder-1.0.dev0/Conception
-creating PyBuilder-1.0.dev0/Conception/Unittests
 creating PyBuilder-1.0.dev0/PyBuilder.egg-info
 copying Login.py -> PyBuilder-1.0.dev0
 copying Main.py -> PyBuilder-1.0.dev0
@@ -26,11 +25,9 @@ copying setup.py -> PyBuilder-1.0.dev0
 copying Conception/Controller.py -> PyBuilder-1.0.dev0/Conception
 copying Conception/Exceptions.py -> PyBuilder-1.0.dev0/Conception
 copying Conception/Model.py -> PyBuilder-1.0.dev0/Conception
+copying Conception/Model_tests.py -> PyBuilder-1.0.dev0/Conception
 copying Conception/View.py -> PyBuilder-1.0.dev0/Conception
 copying Conception/__init__.py -> PyBuilder-1.0.dev0/Conception
-copying Conception/test_Model.py -> PyBuilder-1.0.dev0/Conception
-copying Conception/Unittests/Model_tests.py -> PyBuilder-1.0.dev0/Conception/Unittests
-copying Conception/Unittests/__init__.py -> PyBuilder-1.0.dev0/Conception/Unittests
 copying PyBuilder.egg-info/PKG-INFO -> PyBuilder-1.0.dev0/PyBuilder.egg-info
 copying PyBuilder.egg-info/SOURCES.txt -> PyBuilder-1.0.dev0/PyBuilder.egg-info
 copying PyBuilder.egg-info/dependency_links.txt -> PyBuilder-1.0.dev0/PyBuilder.egg-info

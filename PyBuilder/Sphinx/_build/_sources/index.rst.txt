@@ -10,56 +10,55 @@ Welcome to AMS's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-.. automodule:: src.Main
+.. automodule:: Main
     :imported-members:
     :members:
     :undoc-members:
     :show-inheritance:
 
-.. automodule:: src.Login
+.. automodule:: Login
     :imported-members:
     :members:
     :undoc-members:
     :show-inheritance:
 
-.. automodule:: src.Conception.Model
+.. automodule:: Conception.Model
     :imported-members:
     :members:
     :undoc-members:
     :show-inheritance:
 
-.. automodule:: src.Conception.Controller
+.. automodule:: Conception.Controller
     :imported-members:
     :members:
     :undoc-members:
     :show-inheritance:
 
-.. automodule:: src.Conception.View
+.. automodule:: Conception.View
     :imported-members:
     :members:
     :undoc-members:
     :show-inheritance:
 
-.. automodule:: src.Databases.Users
+.. automodule:: Databases.Users
     :imported-members:
     :members:
     :undoc-members:
     :show-inheritance:
 
-.. automodule:: src.Databases.Contributor_Info_Review
+.. automodule:: Databases.Contributor_Info_Review
     :imported-members:
     :members:
     :undoc-members:
     :show-inheritance:
 
-.. automodule:: src.Databases.Article_Info_Review
+.. automodule:: Databases.Article_Info_Review
     :imported-members:
     :members:
     :undoc-members:
     :show-inheritance:
 
-
-.. automodule:: src.Databases.Article_Info_Conception
+.. automodule:: Databases.Article_Info_Conception
     :imported-members:
     :members:
     :undoc-members:

@@ -1,7 +1,12 @@
-import json
+"""
+GUI replacement
+"""
+
 
 class View:
-
+    """
+    All output to user is generated here
+    """
     @staticmethod
     def general_editors_dashboard():
         """
@@ -36,7 +41,8 @@ class View:
         print("")
         print("Welcome to the article suggestions page")
         print("")
-        print(str(num_unreviewed_article_suggestions) + " new article suggestions for you to assess")
+        print(str(num_unreviewed_article_suggestions)
+              + " new article suggestions for you to assess")
         print("")
         print("1 View new article suggestions")
         print("2 View reviewed article suggestions")
@@ -77,7 +83,8 @@ class View:
         print("")
         print("Reviewed Article Suggestions")
         print("")
-        print("If you would like change your review or comment on an article, please type in the article id.")
+        print("If you would like change your review or comment on an article,"
+              " please type in the article id.")
         print("Or type 'back' to return to the previous page")
 
     @staticmethod
@@ -88,7 +95,8 @@ class View:
         1 approve
         2 reject
         3 comment
-        4 return to previous page (Console Output Reviewed Article Suggestions/reviewed_article_suggestions_page)
+        4 return to previous page
+        (Console Output Reviewed Article Suggestions/reviewed_article_suggestions_page)
         """
         print("")
         print("Suggested Article")
@@ -117,17 +125,17 @@ class View:
         """
         for article in article_suggestions:
             print("")
-            print("id: " +str(article[0]))
-            print("Title: " +article[1])
-            print("Outline: " +article[2])
-            print("Wordcount: " +str(article[3]))
-            print("Suggested Author: " +article[4])
-            print("Suggested Assignee: " +article[5])
-            print("Suggested Reviewer: " +article[6])
-            print("Creator: " +article[7])
+            print("id: " + str(article[0]))
+            print("Title: " + article[1])
+            print("Outline: " + article[2])
+            print("Wordcount: " + str(article[3]))
+            print("Suggested Author: " + article[4])
+            print("Suggested Assignee: " + article[5])
+            print("Suggested Reviewer: " + article[6])
+            print("Creator: " + article[7])
             print("Comments: ")
             for comment_info in article[8]:
-                print(comment_info[1]+ " commented on " + comment_info[3][:comment_info[3].index(" ")]+ ":")
+                print(comment_info[1] + " commented on " + comment_info[3][:comment_info[3].index(" ")] + ":")
                 print(comment_info[2])
             print("")
 
@@ -181,7 +189,8 @@ class View:
     def print_all_articles_review_information(articles_in_review: list):
         """
         Prints important Articles in Review Information
-        :param articles_in_review: [[id, title, assignee, author, first_reviewer, last updated, type,
+        :param articles_in_review:
+        [[id, title, assignee, author, first_reviewer, last updated, type,
         edition, status, outline, wordcount, region, theme],]
         """
         for article in articles_in_review:
@@ -230,11 +239,8 @@ class View:
         """
         for contributor_info in contributors_info:
             print("")
-            print("Name: " +contributor_info[1])
-            print("Email: " +contributor_info[2])
+            print("Name: " + contributor_info[1])
+            print("Email: " + contributor_info[2])
             print("Institution: " + contributor_info[3])
-            print("Role: " +contributor_info[4])
+            print("Role: " + contributor_info[4])
             print("")
-
-
-
