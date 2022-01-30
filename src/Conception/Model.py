@@ -5,10 +5,10 @@ It receives user input from the controller.
 
 import json
 import datetime
-from Databases import Article_Info_Conception as aic_db #pylint: disable=import-error
-from Databases import Contributor_Info_Review as cir_db #pylint: disable=import-error
-from Databases import Article_Info_Review as air_db #pylint: disable=import-error
-from Databases import Users as users #pylint: disable=import-error
+from Databases import Article_Info_Conception as aic_db
+from Databases import Contributor_Info_Review as cir_db
+from Databases import Article_Info_Review as air_db
+from Databases import Users as users
 
 
 class Model:

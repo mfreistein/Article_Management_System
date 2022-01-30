@@ -1,8 +1,8 @@
 """
 Opens the Login Page and verifies the username and password
 """
-from Databases import Users #pylint: disable=import-error
-from Conception import View, Model, Controller #pylint: disable=import-error
+from Databases import Users
+from Conception import View, Model, Controller
 
 
 
