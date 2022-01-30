@@ -2,3 +2,5 @@
 
 # Naming style matching correct module names.
 module-naming-style=any
+
+disable=import-error
