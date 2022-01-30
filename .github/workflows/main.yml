@@ -44,7 +44,7 @@ jobs:
           echo Pylint
           pip install pylint
           cd src
-          pylint main.py
-          pylint login.py
+          pylint Main.py
+          pylint Login.py
           echo
 
