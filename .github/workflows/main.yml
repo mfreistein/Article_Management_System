@@ -57,4 +57,19 @@ jobs:
           pylint Model.py
           pylint Controller.py
           echo
-
+          echo Pip Install Flake8
+          cd ..
+          pip install flake8
+          echo
+          echo flake8 Login
+          flake8 Login.py
+          echo
+          echo flake8 Main
+          flake8 Main.py
+          echo
+          echo flake8 Conception
+          cd Conception
+          flake8 View.py
+          flake8 Model.py
+          flake8 Controller.py
+          echo
