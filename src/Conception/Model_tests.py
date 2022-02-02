@@ -1,6 +1,5 @@
 from unittest import TestCase
 
-
 class TestModel(TestCase):
     def test_get_all_article_suggestions(self):
         from Model import Model
