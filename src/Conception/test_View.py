@@ -47,5 +47,5 @@ class TestView(TestCase):
             View.View.comment_on_article_suggestion_page()
             self.assertEqual(fake_out.getvalue(), expected_output)
 
-    
+
 
