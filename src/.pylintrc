@@ -6,4 +6,5 @@ module-naming-style=any
 disable=import-error, 
 	line-too-long,
 	missing-class-docstring,
-	invalid-name
+	invalid-name,
+	consider-using-in
