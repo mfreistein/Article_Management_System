@@ -74,11 +74,11 @@ jobs:
           flake8 Controller.py
           echo
           echo UnitTests
-          python -m unittest test_View.TestView.test_general_editors_dashboard
-          python -m unittest test_View.TestView.test_article_suggestions_page
-          python -m unittest test_View.TestView.test_print_invalid_input
-          python -m unittest test_View.TestView.test_new_article_suggestions_page
-          python -m unittest test_View.TestView.test_reviewed_article_suggestions_page
-          python -m unittest test_View.TestView.test_review_suggested_article_page
-          python -m unittest test_View.TestView.test_comment_on_article_suggestion_page
+          python -m unittest View_tests.TestView.test_general_editors_dashboard
+          python -m unittest View_tests.TestView.test_article_suggestions_page
+          python -m unittest View_tests.TestView.test_print_invalid_input
+          python -m unittest View_tests.TestView.test_new_article_suggestions_page
+          python -m unittest View_tests.TestView.test_reviewed_article_suggestions_page
+          python -m unittest View_tests.TestView.test_review_suggested_article_page
+          python -m unittest View_tests.TestView.test_comment_on_article_suggestion_page
           echo
