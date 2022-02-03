@@ -2,6 +2,8 @@
 GUI replacement
 """
 
+from src.Conception.datamodel import Article_Conception
+
 
 class View:
     """
@@ -157,6 +159,14 @@ class View:
         assignee = input(str("Feel free to suggest an assignee: "))
         reviewer = input(str("Feel free to suggest a reviewer: "))
         comments = input(str("Feel free to comment: "))
+        article = Article_Conception.Article_Conception().setTitle(title).\
+            setOutline(outline).\
+            setWordcount(wordcount).\
+            setSuggested_author(author).\
+            setSuggested_assignee(assignee).\
+            setSuggested_reviewer(reviewer).\
+            setComments(comments)
+        print(article)
         return [title, outline, wordcount, author, assignee, reviewer, comments]
 
     @staticmethod
