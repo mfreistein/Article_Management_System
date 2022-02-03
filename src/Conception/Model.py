@@ -15,6 +15,7 @@ from src.Databases import Article_Info_Review as air_db
 from src.Databases import Users as users
 from src.Conception import Exceptions
 
+
 class Model:
 
     @staticmethod
@@ -79,10 +80,12 @@ class Model:
             print(e.message)
         if assessment == "un_assessed":
             return [article_suggestion for article_suggestion in article_suggestions
-                    if str(user_id) not in json.loads(article_suggestion[10])['approvals'] and str(user_id) not in json.loads(article_suggestion[10])['rejections']]
+                    if str(user_id) not in json.loads(article_suggestion[10])['approvals'] and str(user_id) not in
+                    json.loads(article_suggestion[10])['rejections']]
         if assessment == "assessed":
             return [article_suggestion for article_suggestion in article_suggestions
-                    if str(user_id) in json.loads(article_suggestion[10])['approvals'] or str(user_id) in json.loads(article_suggestion[10])['rejections']]
+                    if str(user_id) in json.loads(article_suggestion[10])['approvals'] or str(user_id) in
+                    json.loads(article_suggestion[10])['rejections']]
         return None
 
     @staticmethod
@@ -162,10 +165,10 @@ class Model:
                             article_suggestion_info[7], date_now.strftime("%Y-%m-%d %H:%M:%S")]
             comments = json.dumps({"comments": [comment_form]})
         tuple_vals = (article_suggestion_info[0], article_suggestion_info[1],
-                int(article_suggestion_info[2]), article_suggestion_info[3],
-                article_suggestion_info[4], article_suggestion_info[5],
-                article_suggestion_info[6], date_now.strftime("%Y-%m-%d %H:%M:%S"),
-                date_now.now().strftime("%Y-%m-%d %H:%M:%S"), assessments, comments)
+                      int(article_suggestion_info[2]), article_suggestion_info[3],
+                      article_suggestion_info[4], article_suggestion_info[5],
+                      article_suggestion_info[6], date_now.strftime("%Y-%m-%d %H:%M:%S"),
+                      date_now.now().strftime("%Y-%m-%d %H:%M:%S"), assessments, comments)
         aic_db.add_article_suggestion(tuple_vals)
 
     @staticmethod
