@@ -13,6 +13,7 @@ from src.Databases import Article_Info_Conception as aic_db
 from src.Databases import Contributor_Info_Review as cir_db
 from src.Databases import Article_Info_Review as air_db
 from src.Databases import Users as users
+from src.Conception import Exceptions
 
 class Model:
 
@@ -71,6 +72,11 @@ class Model:
         str assessment: assessment is either "assessed" or "un_assessed"
         :return list filtered_article_suggestions_list:
         """
+        try:
+            if assessment != "assessed" and assessment != "un_assessed":
+                raise Exceptions.GeneralException("Error: Must Specify if article has been assessed or not!")
+        except Exceptions.GeneralException as e:
+            print(e.message)
         if assessment == "un_assessed":
             return [article_suggestion for article_suggestion in article_suggestions
                     if str(user_id) not in json.loads(article_suggestion[10])['approvals'] and str(user_id) not in json.loads(article_suggestion[10])['rejections']]
