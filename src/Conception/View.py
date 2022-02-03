@@ -2,8 +2,8 @@
 GUI replacement
 """
 # from src.Conception.datamodel import Datamodel_Article_Conception
-# import Datamodel_Article_Conception
-from src.Conception import Datamodel_Article_Conception
+import Datamodel_Article_Conception
+# from src.Conception import Datamodel_Article_Conception
 
 class View:
     """
