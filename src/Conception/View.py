@@ -1,9 +1,9 @@
 """
 GUI replacement
 """
-
-from src.Conception.datamodel import Article_Conception
-
+#from src.Conception.datamodel import Datamodel_Article_Conception
+#import Datamodel_Article_Conception
+from src.Conception import Datamodel_Article_Conception
 
 class View:
     """
@@ -159,7 +159,7 @@ class View:
         assignee = input(str("Feel free to suggest an assignee: "))
         reviewer = input(str("Feel free to suggest a reviewer: "))
         comments = input(str("Feel free to comment: "))
-        article = Article_Conception.Article_Conception().setTitle(title).\
+        article = Datamodel_Article_Conception.Article_Conception().setTitle(title).\
             setOutline(outline).\
             setWordcount(wordcount).\
             setSuggested_author(author).\
