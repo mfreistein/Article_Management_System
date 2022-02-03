@@ -73,7 +73,7 @@ jobs:
           flake8 Model.py
           flake8 Controller.py
           echo
-          echo UnitTests
+          echo UnitTests View.py
           python -m unittest View_tests.TestView.test_general_editors_dashboard
           python -m unittest View_tests.TestView.test_article_suggestions_page
           python -m unittest View_tests.TestView.test_print_invalid_input
