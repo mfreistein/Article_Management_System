@@ -44,7 +44,7 @@ Lastly, the system assists a group of professional layout editors in preparing r
 
 ## 4. Metrics
 
--SonarQube
+-[SonarQube](Sonarqube)
 
 -Pylint
 
@@ -63,7 +63,8 @@ Lastly, the system assists a group of professional layout editors in preparing r
 
 -DocStrings were used to improve readability
 
--Custom Exception Handling Statements were created to ease error handling
+-[Custom Exception Handling Statements](src/Conception/Model.py?plain=1#L99) were created to ease error handling
+
 
 
 [Clean Code Cheat Sheet](Aufgaben/Clean_Code_Cheat_Sheet.txt)
@@ -71,7 +72,16 @@ Lastly, the system assists a group of professional layout editors in preparing r
 
 
 
-## 6. Build Management: PyBuilder
+## 6. Build Management: 
+
+[PyBuilder](PyBuilder) runs: 
+
+-[Sphinx Automatic Documentation](PyBuilder/Sphinx/_build/index.html)
+
+-[Unit Tests](PyBuilder/target/reports/unittest)
+
+-[Flake8](PyBuilder/target/reports/flake8)
+
 
 
 
@@ -83,7 +93,15 @@ Lastly, the system assists a group of professional layout editors in preparing r
 
 
 
-## 8. Continuous Delivery: [GitHub Actions](.github/workflows/main.yml) 
+## 8. Continuous Delivery: 
+
+[GitHub Actions](.github/workflows/main.yml) runs:
+
+-[Pylint](.github/workflows/main.yml?plain=1#49)
+
+-[Flake8](.github/workflows/main.yml?plain=1#64)
+
+-[Unit Tests](.github/workflows/main.yml?plain=1#77)
 
 
 
