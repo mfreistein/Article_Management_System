@@ -13,7 +13,7 @@ Authors and Reviewers will be contacted automatically and can upload their work 
 Lastly, the system assists a group of professional layout editors in preparing reviewed articles for publication.
 
 
-** The [Article Management System for General Editors/Article Conception](src) has been implemented.
+#### The [Article Management System for General Editors/Article Conception](src) has been implemented.
 
 -[Model](src/Conception/Model.py)
 
@@ -107,7 +107,7 @@ Favourite Pycharm key shortcuts for Mac
 
 ## 10. DSL:
 
--[MySQL](src/Databases)
+-[MySQL](src/Databases/Article_Info_Conception.py?plain=1#L17)
 
 -[Factory Method Pattern](src/Conception/Datamodel_Article_Conception.py) used [here](src/Conception/View.py?plain=1#L161)
 
