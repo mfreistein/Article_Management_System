@@ -1,6 +1,6 @@
-README_
+# README_
 
-Business Model:
+#### Business Model:
 
 The Article Management System aims to drive research by helping experts in a field propose, commision, write, review and edit scientific research papers for an online journal at low cost to themselves.
 
@@ -13,7 +13,7 @@ Authors and Reviewers will be contacted automatically and can upload their work 
 Lastly, the system assists a group of professional layout editors in preparing reviewed articles for publication.
 
 
-The [Article Management System for General Editors/Article Conception](src) has been implemented.
+## The [Article Management System for General Editors/Article Conception](src) has been implemented.
 
 -[Model](src/Conception/Model.py)
 
@@ -24,7 +24,7 @@ The [Article Management System for General Editors/Article Conception](src) has 
 
 
 
-2. UML diagrams can be found in the [UML folder](Aufgaben/Diagrams/UML): 
+## 2. UML diagrams can be found in the [UML folder](Aufgaben/Diagrams/UML): 
 
 -[Model_View_Controller_Architecture_Article Conception_AMS](Aufgaben/Diagrams/UML/Model_View_Controller_Architecture_Article_Conception_AMS.jpg)
 
@@ -35,14 +35,14 @@ The [Article Management System for General Editors/Article Conception](src) has 
 
 
 
-3. DDD diagrams can be found in the [DDD folder](Aufgaben/Diagrams/DDD): 
+## 3. DDD diagrams can be found in the [DDD folder](Aufgaben/Diagrams/DDD): 
 
 -[Bounded Contexts Diagram](Aufgaben/Diagrams/DDD/Bounded_Contexts_Diagram_AMS.jpg)
 
 
 
 
-4. Metrics
+## 4. Metrics
 
 -SonarQube
 
@@ -53,7 +53,7 @@ The [Article Management System for General Editors/Article Conception](src) has 
 
 
 
-5. Clean Code Development: 
+## 5. Clean Code Development: 
 
 -Model/View/Controller Principle was applied in order to seperate concepts vertically 
 
@@ -66,16 +66,16 @@ The [Article Management System for General Editors/Article Conception](src) has 
 -Custom Exception Handling Statements were created to ease error handling
 
 
-[Clean Code Cheat Sheet](Aufgaben/Diagrams/Clean_Code_Cheat_Sheet.txt)
+[Clean Code Cheat Sheet](Aufgaben/Clean_Code_Cheat_Sheet.txt)
 
 
 
 
-6. Build Management: PyBuilder
+## 6. Build Management: PyBuilder
 
 
 
-7. Unit Tests:
+## 7. Unit Tests:
 
 -[Test Model Conception](src/Conception/Model_tests.py)
 
@@ -83,11 +83,11 @@ The [Article Management System for General Editors/Article Conception](src) has 
 
 
 
-8. Continuous Delivery: [GitHub Actions](.github/workflows/main.yml) 
+## 8. Continuous Delivery: [GitHub Actions](.github/workflows/main.yml) 
 
 
 
-9. IDE: Pycharm 
+## 9. IDE: Pycharm 
  
 Favourite Pycharm key shortcuts for Mac
 
@@ -105,12 +105,12 @@ Favourite Pycharm key shortcuts for Mac
 
 
 
-10. DSL:
+## 10. DSL:
 
 -[MySQL](src/Databases)
 
--[Factory Method Pattern](src/Conception/Datamodel_Article_Conception.py) used [here](src/Conception/View.py/suggest_new_article_page)
+-[Factory Method Pattern](src/Conception/Datamodel_Article_Conception.py) used [here](src/Conception/View.py/suggest_new_article_page())
 
 
 
-11.
+## 11.
