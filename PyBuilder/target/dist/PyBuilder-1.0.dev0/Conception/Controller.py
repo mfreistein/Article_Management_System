@@ -35,9 +35,7 @@ class Controller():
         """Calls the Article Suggestions page, processes
         the users input and navigates to next page"""
         article_suggestions = self.model.get_all_article_suggestions()
-        unreviewed_article_suggestions = self.model.filter_article_suggestions_by_assessment(self.__user_id,
-                                                                                             article_suggestions,
-                                                                                             "un_assessed")
+        unreviewed_article_suggestions = self.model.filter_article_suggestions_by_assessment(self.__user_id, article_suggestions, "un_assessed")
         self.view.article_suggestions_page(len(unreviewed_article_suggestions))
         user_decision = input()
         if user_decision == "1":
@@ -57,15 +55,11 @@ class Controller():
         processes the users input and navigates to next page"""
         self.view.new_article_suggestions_page()
         article_suggestions = self.model.get_all_article_suggestions()
-        unreviewed_article_suggestions = self.model.filter_article_suggestions_by_assessment(self.__user_id,
-                                                                                             article_suggestions,
-                                                                                             "un_assessed")
-        unreviewed_article_suggestions = self.model.format_article_suggestions_info_for_print(
-            unreviewed_article_suggestions)
+        unreviewed_article_suggestions = self.model.filter_article_suggestions_by_assessment(self.__user_id, article_suggestions, "un_assessed")
+        unreviewed_article_suggestions = self.model.format_article_suggestions_info_for_print(unreviewed_article_suggestions)
         self.view.print_all_article_suggestions_info(unreviewed_article_suggestions)
         user_input_article_id = input(str("Please type an id to proceed: "))
-        requested_article = self.model.get_article_suggestion_by_id(user_input_article_id,
-                                                                    unreviewed_article_suggestions)
+        requested_article = self.model.get_article_suggestion_by_id(user_input_article_id, unreviewed_article_suggestions)
         if user_input_article_id == "back":
             self.controller_article_suggestions_page()
         elif requested_article is not None:
@@ -79,11 +73,8 @@ class Controller():
         processes the users input and navigates to next page"""
         self.view.reviewed_article_suggestions_page()
         article_suggestions = self.model.get_all_article_suggestions()
-        reviewed_article_suggestions = self.model.filter_article_suggestions_by_assessment(self.__user_id,
-                                                                                           article_suggestions,
-                                                                                           "assessed")
-        reviewed_article_suggestions = self.model.format_article_suggestions_info_for_print(
-            reviewed_article_suggestions)
+        reviewed_article_suggestions = self.model.filter_article_suggestions_by_assessment(self.__user_id, article_suggestions, "assessed")
+        reviewed_article_suggestions = self.model.format_article_suggestions_info_for_print(reviewed_article_suggestions)
         self.view.print_all_article_suggestions_info(reviewed_article_suggestions)
         user_input_article_id = input(str("Please type an id to proceed: "))
         requested_article = self.model.get_article_suggestion_by_id(user_input_article_id, reviewed_article_suggestions)

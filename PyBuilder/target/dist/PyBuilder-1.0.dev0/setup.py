@@ -42,12 +42,16 @@ if __name__ == '__main__':
         project_urls = {},
 
         scripts = [],
-        packages = [
-            '.',
-            'Conception'
-        ],
+        packages = ['Conception'],
         namespace_packages = [],
-        py_modules = [],
+        py_modules = [
+            'Databases.Article_Info_Conception',
+            'Databases.Article_Info_Review',
+            'Databases.Contributor_Info_Review',
+            'Databases.Users',
+            'Login',
+            'Main'
+        ],
         entry_points = {},
         data_files = [],
         package_data = {},

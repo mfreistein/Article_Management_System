@@ -91,3 +91,5 @@ Requirement already satisfied: mysql.connector in ./target/venv/build/cpython-3.
 Requirement already satisfied: mysql.connector in ./target/venv/build/cpython-3.9.7.final.0/lib/python3.9/site-packages (2.2.9)
 Requirement already satisfied: mysql.connector in ./target/venv/build/cpython-3.9.7.final.0/lib/python3.9/site-packages (2.2.9)
 Requirement already satisfied: mysql.connector in ./target/venv/build/cpython-3.9.7.final.0/lib/python3.9/site-packages (2.2.9)
+Requirement already satisfied: mysql.connector in ./target/venv/build/cpython-3.9.7.final.0/lib/python3.9/site-packages (2.2.9)
+Requirement already satisfied: mysql.connector in ./target/venv/build/cpython-3.9.7.final.0/lib/python3.9/site-packages (2.2.9)

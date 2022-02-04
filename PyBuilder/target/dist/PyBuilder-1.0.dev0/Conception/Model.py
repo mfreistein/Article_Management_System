@@ -9,6 +9,11 @@ from Databases import Article_Info_Conception as aic_db
 from Databases import Contributor_Info_Review as cir_db
 from Databases import Article_Info_Review as air_db
 from Databases import Users as users
+# from src.Databases import Article_Info_Conception as aic_db
+# from src.Databases import Contributor_Info_Review as cir_db
+# from src.Databases import Article_Info_Review as air_db
+# from src.Databases import Users as users
+# from src.Conception import Exceptions
 
 
 class Model:
@@ -68,14 +73,19 @@ class Model:
         str assessment: assessment is either "assessed" or "un_assessed"
         :return list filtered_article_suggestions_list:
         """
+        try:
+            if assessment != "assessed" and assessment != "un_assessed":
+                raise Exceptions.GeneralException("Error: Must specify if article has been assessed or not!")
+        except Exceptions.GeneralException as e:
+            print(e.message)
         if assessment == "un_assessed":
-            return [article_suggestion for article_suggestion in article_suggestions if
-                    str(user_id) not in json.loads(article_suggestion[10])['approvals'] and
-                    str(user_id) not in json.loads(article_suggestion[10])['rejections']]
+            return [article_suggestion for article_suggestion in article_suggestions
+                    if str(user_id) not in json.loads(article_suggestion[10])['approvals'] and str(user_id) not in
+                    json.loads(article_suggestion[10])['rejections']]
         if assessment == "assessed":
-            return [article_suggestion for article_suggestion in article_suggestions if
-                    str(user_id) in json.loads(article_suggestion[10])['approvals'] or
-                    str(user_id) in json.loads(article_suggestion[10])['rejections']]
+            return [article_suggestion for article_suggestion in article_suggestions
+                    if str(user_id) in json.loads(article_suggestion[10])['approvals'] or str(user_id) in
+                    json.loads(article_suggestion[10])['rejections']]
         return None
 
     @staticmethod
@@ -86,6 +96,11 @@ class Model:
         sends assessments to Database "Article_Info_Conception"
         :param int user_id, list article, str assessment:
         """
+        try:
+            if assessment != "approve" and assessment != "reject":
+                raise Exceptions.GeneralException("Error: Must specify if article has been approved or rejected!")
+        except Exceptions.GeneralException as e:
+            print(e.message)
         assessments = aic_db.get_article_assessments(article[0])
         assessments = json.loads(assessments[0][0])
         if assessment == "approve":
@@ -149,12 +164,11 @@ class Model:
             comment_form = [article_suggestion_info[6], user_info[0][3],
                             article_suggestion_info[7], date_now.strftime("%Y-%m-%d %H:%M:%S")]
             comments = json.dumps({"comments": [comment_form]})
-        tuple_vals = \
-            (article_suggestion_info[0], article_suggestion_info[1],
-                int(article_suggestion_info[2]), article_suggestion_info[3],
-                article_suggestion_info[4], article_suggestion_info[5],
-                article_suggestion_info[6], date_now.strftime("%Y-%m-%d %H:%M:%S"),
-                date_now.now().strftime("%Y-%m-%d %H:%M:%S"), assessments, comments)
+        tuple_vals = (article_suggestion_info[0], article_suggestion_info[1],
+                      int(article_suggestion_info[2]), article_suggestion_info[3],
+                      article_suggestion_info[4], article_suggestion_info[5],
+                      article_suggestion_info[6], date_now.strftime("%Y-%m-%d %H:%M:%S"),
+                      date_now.now().strftime("%Y-%m-%d %H:%M:%S"), assessments, comments)
         aic_db.add_article_suggestion(tuple_vals)
 
     @staticmethod
@@ -254,5 +268,4 @@ class Model:
     @staticmethod
     def filter_contributors_by_institution(requested_institution: str, contributors: list) -> list:
         """filters for institution from a list of contributors"""
-        return \
-            [contributor for contributor in contributors if requested_institution == contributor[4]]
+        return [contributor for contributor in contributors if requested_institution == contributor[4]]

@@ -6,6 +6,8 @@ WARNING: autodoc: failed to import module 'Model' from module 'Conception'; the 
 No module named 'mysql'
 WARNING: autodoc: failed to import module 'Controller' from module 'Conception'; the following exception was raised:
 No module named 'mysql'
+WARNING: autodoc: failed to import module 'View' from module 'Conception'; the following exception was raised:
+No module named 'Datamodel_Article_Conception'
 WARNING: autodoc: failed to import module 'Users' from module 'Databases'; the following exception was raised:
 No module named 'mysql'
 WARNING: autodoc: failed to import module 'Contributor_Info_Review' from module 'Databases'; the following exception was raised:

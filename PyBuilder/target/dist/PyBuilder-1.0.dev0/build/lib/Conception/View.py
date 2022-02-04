@@ -1,7 +1,8 @@
 """
 GUI replacement
 """
-
+import Datamodel_Article_Conception
+# from Conception import Datamodel_Article_Conception
 
 class View:
     """
@@ -41,8 +42,7 @@ class View:
         print("")
         print("Welcome to the article suggestions page")
         print("")
-        print(str(num_unreviewed_article_suggestions)
-              + " new article suggestions for you to assess")
+        print(str(num_unreviewed_article_suggestions) + " new article suggestions for you to assess")
         print("")
         print("1 View new article suggestions")
         print("2 View reviewed article suggestions")
@@ -158,6 +158,14 @@ class View:
         assignee = input(str("Feel free to suggest an assignee: "))
         reviewer = input(str("Feel free to suggest a reviewer: "))
         comments = input(str("Feel free to comment: "))
+        article = Datamodel_Article_Conception.Article_Conception().setTitle(title).\
+            setOutline(outline).\
+            setWordcount(wordcount).\
+            setSuggested_author(author).\
+            setSuggested_assignee(assignee).\
+            setSuggested_reviewer(reviewer).\
+            setComments(comments)
+        print(article)
         return [title, outline, wordcount, author, assignee, reviewer, comments]
 
     @staticmethod

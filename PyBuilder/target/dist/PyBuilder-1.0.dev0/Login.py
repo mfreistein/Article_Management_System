@@ -5,6 +5,7 @@ from Databases import Users
 from Conception import View, Model, Controller
 
 
+
 def login_page():
     """
     Prompts users to type in username and password
@@ -31,7 +32,8 @@ def verify_username_password(username: str, password: str) -> int:
     """checks if there is a user in the AMS database 'users'
     with the input 'username' and 'password'.
     returns the user's 'id' if true and None if false"""
-    Users.command_handler.execute("SELECT * FROM users WHERE username = %s AND password = %s", (username, password))
+    Users.command_handler.execute\
+        ("SELECT * FROM users WHERE username = %s AND password = %s", (username, password))
     user = Users.command_handler.fetchall()
     if user:
         user_id = user[0][0]

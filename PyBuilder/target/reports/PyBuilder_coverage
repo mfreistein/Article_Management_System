@@ -1,18 +1,18 @@
 Name                                          Stmts   Miss Branch BrPart  Cover
 -------------------------------------------------------------------------------
 /Conception/Controller.py                       154    154     60      0     0%
-/Conception/Exceptions.py                         2      2      2      0     0%
-/Conception/Model.py                            135    135     56      0     0%
+/Conception/Datamodel_Article_Conception.py      55     55      6      0     0%
+/Conception/Exceptions.py                         3      3      2      0     0%
+/Conception/Model.py                            145    145     60      0     0%
 /Conception/Model_tests.py                       22     22      2      0     0%
-/Conception/View.py                             137    137     10      0     0%
+/Conception/View.py                             140    140     10      0     0%
+/Conception/View_tests.py                        40     40      2      0     0%
 /Conception/__init__.py                           0      0      0      0   100%
-/Conception/datamodel/Article_Conception.py      55     55      6      0     0%
 /Databases/Article_Info_Conception.py            22     12      0      0    45%
 /Databases/Article_Info_Review.py                 6      2      0      0    67%
 /Databases/Contributor_Info_Review.py            12      6      0      0    50%
 /Databases/Users.py                               9      2      0      0    78%
 /Login.py                                        24     24      4      0     0%
 /Main.py                                          4      4      0      0     0%
-/__init__.py                                      0      0      0      0   100%
 -------------------------------------------------------------------------------
-TOTAL                                           582    555    140      0     4%
+TOTAL                                           636    609    146      0     3%
