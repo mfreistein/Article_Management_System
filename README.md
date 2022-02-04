@@ -97,11 +97,11 @@ Lastly, the system assists a group of professional layout editors in preparing r
 
 [GitHub Actions](.github/workflows/main.yml) runs:
 
--[Pylint](.github/workflows/main.yml?plain=1#49)
+-[Pylint](.github/workflows/main.yml?plain=1#L49)
 
--[Flake8](.github/workflows/main.yml?plain=1#64)
+-[Flake8](.github/workflows/main.yml?plain=1#L64)
 
--[Unit Tests](.github/workflows/main.yml?plain=1#77)
+-[Unit Tests](.github/workflows/main.yml?plain=1#L77)
 
 
 
