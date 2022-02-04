@@ -55,7 +55,7 @@ Clean Code Development:
 
 Unit Tests:
 
--[Test Model Conception](src/Conception/test_Model.py)
+-[Test Model Conception](src/Conception/Model_tests.py)
 
--[Test View Conception](src/Conception/test_View.py)
+-[Test View Conception](src/Conception/View_tests.py)
 
