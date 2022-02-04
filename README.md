@@ -13,28 +13,30 @@ Authors and Reviewers will be contacted automatically and can upload their work 
 Lastly, the system assists a group of professional layout editors in preparing reviewed articles for publication.
 
 
-So far, the [Article Management System for General Editors/Article Conception](Conception) has been implemented.
+The [Article Management System for General Editors/Article Conception](src) has been implemented.
 
--[Model](Conception/Model.py)
+-[Model](src/Conception/Model.py)
 
--[View](Conception/View.py)
+-[View](src/Conception/View.py)
 
--[Controller](Conception/Controller.py)
-
-
-UML and DDD diagrams can be found in the [UML folder](Diagrams/UML): 
-
--[Model_View_Controller_Architecture_Article Conception_AMS](Diagrams/UML/Model_View_Controller_Architecture_Article_Conception_AMS.jpg)
-
--[State_Diagram_Review_Management_Workflow_AMS](Diagrams/UML/State_Diagram_Review_Management_Workflow_AMS.jpg)
-
--[Class_Diagram_SQL_Databases_Article_Conception_AMS](Diagrams/UML/Class_Diagram_SQL_Databases_Article_Conception_AMS.jpg)
+-[Controller](src/Conception/Controller.py)
 
 
 
-DDD diagrams can be found in the [DDD folder](Diagrams/DDD): 
 
--[Bounded Contexts Diagram](Diagrams/DDD/Bounded_Contexts_Diagram_AMS.jpg)
+UML and DDD diagrams can be found in the [UML folder](Aufgaben/Diagrams/UML): 
+
+-[Model_View_Controller_Architecture_Article Conception_AMS](Aufgaben/Diagrams/UML/Model_View_Controller_Architecture_Article_Conception_AMS.jpg)
+
+-[State_Diagram_Review_Management_Workflow_AMS](Aufgaben/Diagrams/UML/State_Diagram_Review_Management_Workflow_AMS.jpg)
+
+-[Class_Diagram_SQL_Databases_Article_Conception_AMS](Aufgaben/Diagrams/UML/Class_Diagram_SQL_Databases_Article_Conception_AMS.jpg)
+
+
+
+DDD diagrams can be found in the [DDD folder](Aufgaben/Diagrams/DDD): 
+
+-[Bounded Contexts Diagram](Aufgaben/Diagrams/DDD/Bounded_Contexts_Diagram_AMS.jpg)
 
 
 
@@ -44,12 +46,16 @@ Clean Code Development:
 
 -Single responsbility principle was applied to avoid coupling 
 
--Explanatory variables and docstrings were used extensively to improve readability
+-Explanatory variables were used extensively to improve readability
 
--Tries to follow Python conventions
+-DocStrings were used to improve readability
+
+-Custom Exception Handling Statements were created to ease error handling
 
 
 Unit Tests:
 
--[Test Model Conception](Conception/test_Model.py)
+-[Test Model Conception](src/Conception/test_Model.py)
+
+-[Test View Conception](src/Conception/test_View.py)
 
