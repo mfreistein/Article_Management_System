@@ -28,17 +28,17 @@ other ToDo's:
 
 
 
-Cheat Sheet:
+Clean Code Cheat Sheet:
 1. KISS (keep it simple stupid)
-2. DOC strings
-3. single responsibility principle
-4. use of explanatory variables
-5. dedicated value objects over primitive types
-6. separate concepts vertically
-7. exception statements
-8. avoid negative conditionals 
-9. automated unit tests
-10. polymorphism
+2. DocStrings
+3. Single Responsibility Principle
+4. Use of Explanatory Variables
+5. Dedicated Value Objects over Primitive Types
+6. Separate Concepts Vertically
+7. Customized Exception Statements
+8. Avoid Negative Conditionals 
+9. Automated Unit Tests
+10. Polymorphism
 
 9. IDE favourite key shortcuts (Pycharm)
 -cmd-c/cmd-v (copy/paste)

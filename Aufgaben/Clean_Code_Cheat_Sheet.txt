@@ -1,0 +1,21 @@
+Clean Code Cheat Sheet
+
+- KISS (keep it simple stupid)
+
+- DocStrings
+
+- Single Responsibility Principle
+
+- Use of Explanatory Variables
+
+- Dedicated Value Objects over Primitive Types
+
+- Separate Concepts Vertically
+
+- Customized Exception Statements
+
+- Avoid Negative Conditionals 
+
+- Automated Unit Tests
+
+- Polymorphism

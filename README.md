@@ -24,7 +24,7 @@ The [Article Management System for General Editors/Article Conception](src) has 
 
 
 
-UML and DDD diagrams can be found in the [UML folder](Aufgaben/Diagrams/UML): 
+2. UML diagrams can be found in the [UML folder](Aufgaben/Diagrams/UML): 
 
 -[Model_View_Controller_Architecture_Article Conception_AMS](Aufgaben/Diagrams/UML/Model_View_Controller_Architecture_Article_Conception_AMS.jpg)
 
@@ -34,13 +34,26 @@ UML and DDD diagrams can be found in the [UML folder](Aufgaben/Diagrams/UML):
 
 
 
-DDD diagrams can be found in the [DDD folder](Aufgaben/Diagrams/DDD): 
+
+3. DDD diagrams can be found in the [DDD folder](Aufgaben/Diagrams/DDD): 
 
 -[Bounded Contexts Diagram](Aufgaben/Diagrams/DDD/Bounded_Contexts_Diagram_AMS.jpg)
 
 
 
-Clean Code Development: 
+
+4. Metrics
+
+-SonarQube
+
+-Pylint
+
+-Flake8
+
+
+
+
+5. Clean Code Development: 
 
 -Model/View/Controller Principle was applied in order to seperate concepts vertically 
 
@@ -53,9 +66,51 @@ Clean Code Development:
 -Custom Exception Handling Statements were created to ease error handling
 
 
-Unit Tests:
+[Clean Code Cheat Sheet](Aufgaben/Diagrams/Clean_Code_Cheat_Sheet.txt)
+
+
+
+
+6. Build Management: PyBuilder
+
+
+
+7. Unit Tests:
 
 -[Test Model Conception](src/Conception/Model_tests.py)
 
 -[Test View Conception](src/Conception/View_tests.py)
 
+
+
+8. Continuous Delivery: [GitHub Actions](.github/workflows/main.yml) 
+
+
+
+9. IDE: Pycharm 
+ 
+Favourite Pycharm key shortcuts for Mac
+
+-cmd-c/cmd-v (copy/paste)
+
+-alt-spacebar (preview function)
+
+-alt+shift+click (edit several lines at once )
+
+-hightlight section + alt+shift+g (add carets to ends of selected lines)
+
+-click+cmd+b (shows me where everywhere I've used the class/function/variable in my code) 
+
+-shift shift (allows me to quickly navigate code)
+
+
+
+10. DSL:
+
+-[MySQL](src/Databases)
+
+-[Factory Method Pattern](src/Conception/Datamodel_Article_Conception.py) used [here](src/Conception/View.py/suggest_new_article_page)
+
+
+
+11.
