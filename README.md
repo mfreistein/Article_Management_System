@@ -46,9 +46,9 @@ Lastly, the system assists a group of professional layout editors in preparing r
 
 -[SonarQube](Sonarqube)
 
--Pylint
+-[Pylint](Aufgaben/pylint_output)
 
--Flake8
+-[Flake8](PyBuilder/target/reports/flake8)
 
 
 

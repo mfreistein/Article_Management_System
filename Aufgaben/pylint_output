@@ -1,0 +1,33 @@
+Last login: Fri Feb  4 17:21:19 on ttys000
+^[[A
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+(base) Manuels-MBP:~ manuelfreistein$ cd Desktop/Dev/FST_Excercise/src
+(base) Manuels-MBP:src manuelfreistein$ pylint main.py
+
+--------------------------------------------------------------------
+Your code has been rated at 10.00/10 (previous run: 10.00/10, +0.00)
+
+(base) Manuels-MBP:src manuelfreistein$ pylint login.py
+
+--------------------------------------------------------------------
+Your code has been rated at 10.00/10 (previous run: 10.00/10, +0.00)
+
+(base) Manuels-MBP:src manuelfreistein$ cd Conception
+(base) Manuels-MBP:Conception manuelfreistein$ pylint view.py
+
+--------------------------------------------------------------------
+Your code has been rated at 10.00/10 (previous run: 10.00/10, +0.00)
+
+(base) Manuels-MBP:Conception manuelfreistein$ pylint controller.py
+
+-------------------------------------------------------------------
+Your code has been rated at 10.00/10 (previous run: 9.94/10, +0.06)
+
+(base) Manuels-MBP:Conception manuelfreistein$ pylint model.py
+
+-------------------------------------------------------------------
+Your code has been rated at 10.00/10 (previous run: 9.91/10, +0.09)
+
+(base) Manuels-MBP:Conception manuelfreistein$ 
