@@ -24,7 +24,7 @@ Lastly, the system assists a group of professional layout editors in preparing r
 
 ## 1. Git
 
-This is my first own Git project. I installed Git, generated a project token and was able to set up a remote Github repository. I added a [.gitignore file](.gitignore) and was able to set up Github Actions. I got acquainted with commits as well as push and pull requests. I created new branches and occasionaly ran into trouble with unstaged changes which I fixed with rebase and stash commands. I was able to reset to previous stages of my project. 
+This is my first own Git project. I installed Git, generated a project token and was able to set up a remote Github repository. I added a [.gitignore](.gitignore) file and was able to set up Github Actions. I got acquainted with commits as well as push and pull requests. I created new branches and occasionaly ran into trouble with unstaged changes which I fixed with rebase and stash commands. I was able to reset to previous stages of my project. 
 
 
 ## 2. UML 
