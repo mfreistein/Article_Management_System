@@ -130,11 +130,11 @@ I chose Pycharm as my IDE as I had used it before. I've also worked with Intelli
 
 ## 10. DSL:
 
+There are two examples of Domain Specific Languages in this code: 
 
--[MySQL](src/Databases/Article_Info_Conception.py?plain=1#L17)
+-A [MySQL](src/Databases) database stores all the necessary article and user information for this project. Accessing the database was easiest to achieve by using [SQL commands](src/Databases/Article_Info_Conception.py?plain=1#L17). Any person with an understanding of SQL should be able to reconfigure the code.
 
--[Factory Method Pattern](src/Conception/Datamodel_Article_Conception.py) used [here](src/Conception/View.py?plain=1#L161)
-
+-A [Factory Method Pattern](src/Conception/Datamodel_Article_Conception.py) was also introduced. It was used [here](src/Conception/View.py?plain=1#L161) for example. It was especially helpful in this case for flexibly constructing data for specific datamodels and different article types.
 
 
 
