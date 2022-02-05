@@ -91,7 +91,7 @@ As this program is written in Python, I decided to use [PyBuilder](PyBuilder). I
 
 ## 7. Unit Tests:
 
-Different Unit tests were implemented to make sure that the individual functions were performing as intended. It took me a while to figure out how exactly to test print to console statements, which was important to enable me to test the programs interface ([View Conception Tests](src/Conception/View_tests.py)). Testing the MySQL commands was a bit more straightforward[Model Conception Tests](src/Conception/Model_tests.py). Again, I tried to label everything as clearly as possible so to avoid confusion while reading/understanding the unit tests. One example would be the [expected output](src/Conception/View_tests.py?plain=1#L10) variable in the interface tests. It clearly shows what the intention of the test is. 
+Different Unit tests were implemented to make sure that the individual functions were performing as intended. It took me a while to figure out how exactly to test print to console statements, which was important to enable me to test the programs interface ([View Conception Tests](src/Conception/View_tests.py)). Testing the MySQL commands was a bit more straightforward [Model Conception Tests](src/Conception/Model_tests.py). Again, I tried to label everything as clearly as possible so to avoid confusion while reading/understanding the unit tests. One example would be the [expected output](src/Conception/View_tests.py?plain=1#L10) variable in the interface tests. It clearly shows what the intention of the test is. 
 
 
 
