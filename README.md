@@ -52,23 +52,23 @@ The DDD diagram can be found in the [DDD folder](Aufgaben/Diagrams/DDD):
 
 ## 4. Metrics
 
-I applied three different metrics including [SonarQube](Sonarqube), [Pylint](Aufgaben/pylint_output) and [Flake8](PyBuilder/target/reports/flake8). Sonarqube was particularly helpful in identifying code vulnerabilities. Pylint and Flake8 were helpful style guides, especially considering my aim to apply clean code principles. However, I did have to configure [Pylint](src/.pylintrc) and [Flake8](src/.flake8) as many of their suggestions weren't necessary and interrupted the build process (f. ex. lines of code too long or whitespace conventions)
+I applied three different metrics including [SonarQube](Sonarqube), [Pylint](Aufgaben/pylint_output) and [Flake8](PyBuilder/target/reports/flake8). Sonarqube was particularly helpful in identifying code vulnerabilities. Pylint and Flake8 were helpful style guides, especially considering my aim to apply clean code principles. However, I did have to configure [Pylint](src/.pylintrc) and [Flake8](src/.flake8) as many of their suggestions seemed to be a matter or preference as opposed to necessity and interrupted the build process (f. ex. whitespace conventions)
 
 
 
 ## 5. Clean Code Development: 
 
-I tried to apply as many clean code principles as I could. I paid particular attention to the following five as they seemed easy to apply, particularly helpful to others trying to read and make sense of the code or supported for greater code stability.
+I tried to apply as many clean code principles as I could. I paid particular attention to the following five as they seemed easy to apply, particularly helpful to others trying to read and maintain the code or supported greater code stability.
 
--Model/View/Controller Principle was applied in order to seperate concepts vertically 
+-Model/View/Controller principle was applied in order to seperate concepts vertically and focus responsibilities on specific issues.
 
--Single responsbility principle was applied to avoid coupling 
+-Single responsbility principle was applied to avoid coupling. For example, in the [Model](src/Conception/Model.py) class, there are three seperate functions that each format the particular database information that they receive for console output ([format_articles_in_review_info_for_print](src/Conception/Model.py?plain=1#L186), [format_contributors_info_for_print](src/Conception/Model.py?plain=1#L243), [format_article_suggestions_info_for_print](src/Conception/Model.py?plain=1#L39))
 
--Explanatory variables were used extensively to improve readability
+-Explanatory variables were used extensively to improve readability. For example, it is easy to differentiate [unreviewed_article_suggestions](src/Conception/Controller.py?plain=1#L38) to [reviewed_article_suggestions](src/Conception/Controller.py?plain=1#L76).
 
--DocStrings were used to improve readability
+-DocStrings were also used to improve readability. In combination with some of the pycharm shortcuts, DocStrings were extremely helpful in quickly understanding code I had written previously. [In this case](src/Conception/View.py?plain=1#L197) for example, the reader is immediately given the format the function is receiving the data in. This is particularly helpful as articles in different stages of the review process will carry differnt data.
 
--[Custom Exception Handling Statements](src/Conception/Model.py?plain=1#L99) were created to ease error handling
+-[Custom Exception Handling Statements](src/Conception/Model.py?plain=1#L99) were created to ease error handling.
 
 
 
@@ -79,22 +79,19 @@ I tried to apply as many clean code principles as I could. I paid particular att
 
 ## 6. Build Management: 
 
-[PyBuilder](PyBuilder) runs: 
+As this program is written in Python, I decided to use [PyBuilder](PyBuilder). It runs: 
 
--[Sphinx Automatic Documentation](PyBuilder/Sphinx/_build/index.html)
+-[Sphinx Automatic Documentation](PyBuilder/Sphinx/_build/index.html). Unfortunately, I kept running into a mysql import error, which I was unable to fix until now. Therefore, not all DocStrings are shown in the Documentation
 
--[Unit Tests](PyBuilder/target/reports/unittest)
+-[Unit Tests](PyBuilder/target/reports/unittest). I run my unit tests through PyBuilder. However, I had to [configure](PyBuilder/build.py) the coverage threshold warning as the above mentioned mysql import error was also causing problems for the unit test. 
 
--[Flake8](PyBuilder/target/reports/flake8)
-
+-[Flake8](PyBuilder/target/reports/flake8) was helpful in enforcing coding style principles and maintaining clean code.
 
 
 
 ## 7. Unit Tests:
 
--[Test Model Conception](src/Conception/Model_tests.py)
-
--[Test View Conception](src/Conception/View_tests.py)
+Different Unit tests were implemented to make sure that the individual functions were performing as intended. It took me a while to figure out how exactly to test print to console statements, which was important to enable me to test the programs interface ([View Conception Tests](src/Conception/View_tests.py)). Testing the MySQL commands was a bit more straightforward[Model Conception Tests](src/Conception/Model_tests.py). Again, I tried to label everything as clearly as possible so to avoid confusion while reading/understanding the unit tests. One example would be the [expected output](src/Conception/View_tests.py?plain=1#L10) variable in the interface tests. It clearly shows what the intention of the test is. 
 
 
 
