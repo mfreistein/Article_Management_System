@@ -98,7 +98,7 @@ Different Unit tests were implemented to make sure that the individual functions
 
 ## 8. Continuous Delivery: 
 
-[GitHub Actions](.github/workflows/main.yml) runs:
+As the project was set up in GitHub, I decided to use [GitHub Actions](.github/workflows/main.yml) as its Continuous Delivery tool. It runs:
 
 -[Pylint](.github/workflows/main.yml?plain=1#L49)
 
@@ -106,29 +106,30 @@ Different Unit tests were implemented to make sure that the individual functions
 
 -[Unit Tests](.github/workflows/main.yml?plain=1#L77)
 
+I would like to have added PyBuilder to the script, however, the import error for mysql kept popping up and interrupting the build. Therefore, I removed it for the time being.
+
 
 
 
 ## 9. IDE: Pycharm 
  
-Favourite Pycharm key shortcuts for Mac
+I chose Pycharm as my IDE as I had used it before. I've also worked with IntelliJ. I felt very comfortable using both and have profited particularly from the easy reformatting tools. My favourite Pycharm key shortcuts for Mac are:
 
--cmd-c/cmd-v (copy/paste)
+-alt-spacebar : This preview window allows a reader to quickly read what exactly is happening in the selected function or class without having to navigate to it, saving time and energy. 
 
--alt-spacebar (preview function)
+-alt+shift+click : Editing several lines at once can be extremely helpful in certain situations. I use this shortcut very often for indenting purposes.
 
--alt+shift+click (edit several lines at once )
+-hightlight section + alt+shift+g : Same principle as above. Adding carets to ends of selected lines eases the editing process.
 
--hightlight section + alt+shift+g (add carets to ends of selected lines)
+-click+cmd+b : This shortcut shows me everywhere I've used the selected class/function/variable in my code. It was particularly helpful for reading/understanding the code.
 
--click+cmd+b (shows me where everywhere I've used the class/function/variable in my code) 
-
--shift shift (allows me to quickly navigate code)
+-shift shift : Allows you to quickly navigate to a specific section of the code.
 
 
 
 
 ## 10. DSL:
+
 
 -[MySQL](src/Databases/Article_Info_Conception.py?plain=1#L17)
 
