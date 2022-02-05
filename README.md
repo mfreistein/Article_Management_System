@@ -46,8 +46,7 @@ I created 4 UML diagrams to help in the design and ordering process of the proje
 
 The DDD diagram can be found in the [DDD folder](Aufgaben/Diagrams/DDD): 
 
--[Bounded Contexts Diagram](Aufgaben/Diagrams/DDD/Bounded_Contexts_Diagram_AMS.jpg)
-
+-There are several bounded contexts involved in this project, which I was able to seperate during the design of the [Bounded Contexts Diagram](Aufgaben/Diagrams/DDD/Bounded_Contexts_Diagram_AMS.jpg). General Editors, Managing Editors, Authors, Reviewers and Layout Editors each work seperately from each other and have different responsibilites. These responsibilities are reflected in structure of the code. Necessary interaction between these bounded contexts occurs via a published language in the case of the Authors and Reviwers interacting with the Managing Editors during the review process. This is especially important considering that the review process is blind and reviewers and authors need to be kept anonymous. A downstream Supplier/Customer relationship is necessary during the process of the article moving from its conception phase to the review phase as well as from the review phase to the layout editing phase. Certain changes will have to take place during this process, but the basic information of the article is set during the conception and only added to during the review phase. Same principle applies to the layout editing phase.
 
 
 
