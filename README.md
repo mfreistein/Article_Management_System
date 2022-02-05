@@ -15,11 +15,11 @@ Lastly, the system assists a group of professional layout editors in preparing r
 
 #### The [Article Management System for General Editors/Article Conception](src) has been implemented.
 
-	-[Model](src/Conception/Model.py)
+-[Model](src/Conception/Model.py)
 
-	-[View](src/Conception/View.py)
+-[View](src/Conception/View.py)
 
-	-[Controller](src/Conception/Controller.py)
+-[Controller](src/Conception/Controller.py)
 
 
 ## 1. Git
@@ -29,44 +29,45 @@ Lastly, the system assists a group of professional layout editors in preparing r
 
 ## 2. UML diagrams can be found in the [UML folder](Aufgaben/Diagrams/UML): 
 
-	-[Model_View_Controller_Architecture_Article Conception_AMS](Aufgaben/Diagrams/UML/Model_View_Controller_Architecture_Article_Conception_AMS.jpg)
+-[Model_View_Controller_Architecture_Article Conception_AMS](Aufgaben/Diagrams/UML/Model_View_Controller_Architecture_Article_Conception_AMS.jpg)
 
-	-[State_Diagram_Review_Management_Workflow_AMS](Aufgaben/Diagrams/UML/State_Diagram_Review_Management_Workflow_AMS.jpg)
+-[State_Diagram_Review_Management_Workflow_AMS](Aufgaben/Diagrams/UML/State_Diagram_Review_Management_Workflow_AMS.jpg)
 
-	-[Class_Diagram_SQL_Databases_Article_Conception_AMS](Aufgaben/Diagrams/UML/Class_Diagram_SQL_Databases_Article_Conception_AMS.jpg)
+-[Class_Diagram_SQL_Databases_Article_Conception_AMS](Aufgaben/Diagrams/UML/Class_Diagram_SQL_Databases_Article_Conception_AMS.jpg)
 
 
 
 
 ## 3. DDD diagrams can be found in the [DDD folder](Aufgaben/Diagrams/DDD): 
 
-	-[Bounded Contexts Diagram](Aufgaben/Diagrams/DDD/Bounded_Contexts_Diagram_AMS.jpg)
+-[Bounded Contexts Diagram](Aufgaben/Diagrams/DDD/Bounded_Contexts_Diagram_AMS.jpg)
 
 
 
 
 ## 4. Metrics
 
-	-[SonarQube](Sonarqube)
+-[SonarQube](Sonarqube)
 
-	-[Pylint](Aufgaben/pylint_output)
+-[Pylint](Aufgaben/pylint_output)
 
-	-[Flake8](PyBuilder/target/reports/flake8)
+-[Flake8](PyBuilder/target/reports/flake8)
 
 
 
 
 ## 5. Clean Code Development: 
 
-	-Model/View/Controller Principle was applied in order to seperate concepts vertically 
+-Model/View/Controller Principle was applied in order to seperate concepts vertically 
 
-	-Single responsbility principle was applied to avoid coupling 
+-Single responsbility principle was applied to avoid coupling 
 
-	-Explanatory variables were used extensively to improve readability
+-Explanatory variables were used extensively to improve readability
 
-	-DocStrings were used to improve readability
+-DocStrings were used to improve readability
 
-	-[Custom Exception Handling Statements](src/Conception/Model.py?plain=1#L99) were created to ease error handling
+-[Custom Exception Handling Statements](src/Conception/Model.py?plain=1#L99) were created to ease error handling
+
 
 
 [Clean Code Cheat Sheet](Aufgaben/Clean_Code_Cheat_Sheet.txt)
@@ -78,20 +79,20 @@ Lastly, the system assists a group of professional layout editors in preparing r
 
 [PyBuilder](PyBuilder) runs: 
 
-	-[Sphinx Automatic Documentation](PyBuilder/Sphinx/_build/index.html)
+-[Sphinx Automatic Documentation](PyBuilder/Sphinx/_build/index.html)
 
-	-[Unit Tests](PyBuilder/target/reports/unittest)
+-[Unit Tests](PyBuilder/target/reports/unittest)
 
-	-[Flake8](PyBuilder/target/reports/flake8)
+-[Flake8](PyBuilder/target/reports/flake8)
 
 
 
 
 ## 7. Unit Tests:
 
-	-[Test Model Conception](src/Conception/Model_tests.py)
+-[Test Model Conception](src/Conception/Model_tests.py)
 
-	-[Test View Conception](src/Conception/View_tests.py)
+-[Test View Conception](src/Conception/View_tests.py)
 
 
 
@@ -100,11 +101,11 @@ Lastly, the system assists a group of professional layout editors in preparing r
 
 [GitHub Actions](.github/workflows/main.yml) runs:
 
-	-[Pylint](.github/workflows/main.yml?plain=1#L49)
+-[Pylint](.github/workflows/main.yml?plain=1#L49)
 
-	-[Flake8](.github/workflows/main.yml?plain=1#L64)
+-[Flake8](.github/workflows/main.yml?plain=1#L64)
 
-	-[Unit Tests](.github/workflows/main.yml?plain=1#L77)
+-[Unit Tests](.github/workflows/main.yml?plain=1#L77)
 
 
 
@@ -113,26 +114,26 @@ Lastly, the system assists a group of professional layout editors in preparing r
  
 Favourite Pycharm key shortcuts for Mac
 
-	-cmd-c/cmd-v (copy/paste)
+-cmd-c/cmd-v (copy/paste)
 
-	-alt-spacebar (preview function)
+-alt-spacebar (preview function)
 
-	-alt+shift+click (edit several lines at once )
+-alt+shift+click (edit several lines at once )
 
-	-hightlight section + alt+shift+g (add carets to ends of selected lines)
+-hightlight section + alt+shift+g (add carets to ends of selected lines)
 
-	-click+cmd+b (shows me where everywhere I've used the class/function/variable in my code) 
+-click+cmd+b (shows me where everywhere I've used the class/function/variable in my code) 
 
-	-shift shift (allows me to quickly navigate code)
+-shift shift (allows me to quickly navigate code)
 
 
 
 
 ## 10. DSL:
 
-	-[MySQL](src/Databases/Article_Info_Conception.py?plain=1#L17)
+-[MySQL](src/Databases/Article_Info_Conception.py?plain=1#L17)
 
-	-[Factory Method Pattern](src/Conception/Datamodel_Article_Conception.py) used [here](src/Conception/View.py?plain=1#L161)
+-[Factory Method Pattern](src/Conception/Datamodel_Article_Conception.py) used [here](src/Conception/View.py?plain=1#L161)
 
 
 
