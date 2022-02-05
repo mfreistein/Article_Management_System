@@ -24,21 +24,27 @@ Lastly, the system assists a group of professional layout editors in preparing r
 
 ## 1. Git
 
+This is my first own Git project. I installed Git, generated a project token and was able to set up a remote Github repository. I added a .gitignore file and was able to set up Github Actions. I got acquainted with commits as well as push and pull requests. I created new branches and occasionaly ran into trouble with unstaged changes which I fixed with rebase and stash commands. I was able to reset to previous stages of my project. 
+
+
+## 2. UML 
+
+I created 4 UML diagrams to help in the design and ordering process of the project. The UML diagrams can be found in the [UML folder](Aufgaben/Diagrams).
+ 
+ -The class diagram of the system's architecture was a helpful tool in implementing the Model/View/Controller Principle including databases that I chose to use: [Model_View_Controller_Architecture_Article Conception_AMS](Aufgaben/Diagrams/UML/Model_View_Controller_Architecture_Article_Conception_AMS.jpg)
+
+-The state diagram allows for a more detailed understanding of the editorial workflow process and how it can be reproduced digitally. This is something that would have been produced in close consultation with the editors who will actually be using the project: [State_Diagram_Review_Management_Workflow_AMS](Aufgaben/Diagrams/UML/State_Diagram_Review_Management_Workflow_AMS.jpg)
+
+-I also included a class diagram of the basic components of my SQL Database which includes the basic structure of article suggestions and the users who suggest/manipulate them: [Class_Diagram_SQL_Databases_Article_Conception_AMS](Aufgaben/Diagrams/UML/Class_Diagram_SQL_Databases_Article_Conception_AMS.jpg)
+
+-Finally, I created a Bounded Contexts Diagram which helped me structure the project as a whole: [Bounded Contexts Diagram](Aufgaben/Diagrams/DDD/Bounded_Contexts_Diagram_AMS.jpg)
 
 
 
-## 2. UML diagrams can be found in the [UML folder](Aufgaben/Diagrams/UML): 
 
--[Model_View_Controller_Architecture_Article Conception_AMS](Aufgaben/Diagrams/UML/Model_View_Controller_Architecture_Article_Conception_AMS.jpg)
+## 3. DDD 
 
--[State_Diagram_Review_Management_Workflow_AMS](Aufgaben/Diagrams/UML/State_Diagram_Review_Management_Workflow_AMS.jpg)
-
--[Class_Diagram_SQL_Databases_Article_Conception_AMS](Aufgaben/Diagrams/UML/Class_Diagram_SQL_Databases_Article_Conception_AMS.jpg)
-
-
-
-
-## 3. DDD diagrams can be found in the [DDD folder](Aufgaben/Diagrams/DDD): 
+The DDD diagram can be found in the [DDD folder](Aufgaben/Diagrams/DDD): 
 
 -[Bounded Contexts Diagram](Aufgaben/Diagrams/DDD/Bounded_Contexts_Diagram_AMS.jpg)
 
