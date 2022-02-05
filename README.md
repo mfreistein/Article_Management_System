@@ -52,16 +52,13 @@ The DDD diagram can be found in the [DDD folder](Aufgaben/Diagrams/DDD):
 
 ## 4. Metrics
 
--[SonarQube](Sonarqube)
-
--[Pylint](Aufgaben/pylint_output)
-
--[Flake8](PyBuilder/target/reports/flake8)
-
+I applied three different metrics including [SonarQube](Sonarqube), [Pylint](Aufgaben/pylint_output) and [Flake8](PyBuilder/target/reports/flake8). Sonarqube was particularly helpful in identifying code vulnerabilities. Pylint and Flake8 were helpful style guides, especially considering my aim to apply clean code principles. However, I did have to configure [Pylint](src/.pylintrc) and [Flake8](src/.flake8) as many of their suggestions weren't necessary and interrupted the build process (f. ex. lines of code too long or whitespace conventions)
 
 
 
 ## 5. Clean Code Development: 
+
+I tried to apply as many clean code principles as I could. I paid particular attention to the following five as they seemed easy to apply, particularly helpful to others trying to read and make sense of the code or supported for greater code stability.
 
 -Model/View/Controller Principle was applied in order to seperate concepts vertically 
 
