@@ -29,7 +29,7 @@ This is my first own Git project. I installed Git, generated a project token and
 
 ## 2. UML 
 
-I created 4 UML diagrams to help in the design and ordering process of the project. The UML diagrams can be found in the [UML folder](Aufgaben/Diagrams).
+I created 4 UML diagrams to help in the design and ordering process of the project. The UML diagrams can be found in the [Diagrams folder](Aufgaben/Diagrams).
  
  -The class diagram of the system's architecture was a helpful tool in implementing the Model/View/Controller Principle including databases that I chose to use: [Model_View_Controller_Architecture_Article Conception_AMS](Aufgaben/Diagrams/UML/Model_View_Controller_Architecture_Article_Conception_AMS.jpg)
 
