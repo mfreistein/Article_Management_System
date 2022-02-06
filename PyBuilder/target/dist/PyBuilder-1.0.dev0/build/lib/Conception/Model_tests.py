@@ -27,6 +27,13 @@ class TestModel(TestCase):
 
     def test_filter_contributors_by_last_name(self):
         from Model import Model
-        self.assertEqual(Model.filter_contributors_by_last_name("Flintstone", [[0, "1", "Flintstone"], [0, "17", 3], [7, "1", 66], ]), [[0, "1", "Flintstone"], ])
+        self.assertEqual(Model.filter_contributors_by_last_name("Flintstone", [[0, "1", "Flintstone"], [0, "17", "3"], [7, "1", 66], ]), [[0, "1", "Flintstone"], ])
         self.assertEqual(Model.filter_contributors_by_last_name(55, [[0, "1", "Flintstone"], [0, "17", 3], [7, "1", 55], ]), [[7, "1", 55], ])
         self.assertEqual(Model.filter_contributors_by_last_name(55.0, [[0, "1", "Flintstone"], [0, "17", 3], [7, "1", 55], ]), [[7, "1", 55], ])
+
+
+    def filter_articles_by_author_last_name(self):
+        from Model import Model
+        self.assertEqual(Model.filter_articles_by_author_last_name("Flintstone", [[0, "1", "Flintstone"], [0, "17", 3], [7, "1", 66], ]), [[0, "1", "Flintstone"], ])
+        self.assertEqual(Model.filter_articles_by_author_last_name(55, [[0, "1", "Flintstone"], [0, "17", 3], [7, "1", 55], ]), [[7, "1", 55], ])
+        self.assertEqual(Model.filter_articles_by_author_last_name(55.0, [[0, "1", "Flintstone"], [0, "17", 3], [7, "1", 55], ]), [[7, "1", 55], ])

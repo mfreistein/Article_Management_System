@@ -11,12 +11,12 @@ checking consistency... done
 preparing documents... done
 writing output... [100%] index
 
-generating indices... genindex done
+generating indices... genindex py-modindex done
 writing additional pages... search done
 copying static files... done
 copying extra files... done
 dumping search index in English (code: en)... done
 dumping object inventory... done
-build succeeded, 9 warnings.
+build succeeded, 8 warnings.
 
 The HTML pages are in Sphinx/_build.

@@ -4,10 +4,7 @@ WARNING: autodoc: failed to import module 'Login'; the following exception was r
 No module named 'mysql'
 WARNING: autodoc: failed to import module 'Model' from module 'Conception'; the following exception was raised:
 No module named 'mysql'
-WARNING: autodoc: failed to import module 'Controller' from module 'Conception'; the following exception was raised:
-No module named 'mysql'
-WARNING: autodoc: failed to import module 'View' from module 'Conception'; the following exception was raised:
-No module named 'Datamodel_Article_Conception'
+/Users/manuelfreistein/Desktop/Dev/FST_Excercise/src/Conception/Controller.py:docstring of Conception.Controller.Controller.controller_review_suggested_article_page:4: ERROR: Unexpected indentation.
 WARNING: autodoc: failed to import module 'Users' from module 'Databases'; the following exception was raised:
 No module named 'mysql'
 WARNING: autodoc: failed to import module 'Contributor_Info_Review' from module 'Databases'; the following exception was raised:

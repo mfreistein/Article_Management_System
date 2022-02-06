@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="View_tests.TestView-20220206151804" tests="7" file="View_tests.py" time="0.030" timestamp="2022-02-06T15:18:06" failures="0" errors="0" skipped="0">
+	<testcase classname="View_tests.TestView" name="test_article_suggestions_page" time="0.004" timestamp="2022-02-06T15:18:06"/>
+	<testcase classname="View_tests.TestView" name="test_comment_on_article_suggestion_page" time="0.010" timestamp="2022-02-06T15:18:06"/>
+	<testcase classname="View_tests.TestView" name="test_general_editors_dashboard" time="0.003" timestamp="2022-02-06T15:18:06"/>
+	<testcase classname="View_tests.TestView" name="test_new_article_suggestions_page" time="0.005" timestamp="2022-02-06T15:18:06"/>
+	<testcase classname="View_tests.TestView" name="test_print_invalid_input" time="0.004" timestamp="2022-02-06T15:18:06"/>
+	<testcase classname="View_tests.TestView" name="test_review_suggested_article_page" time="0.002" timestamp="2022-02-06T15:18:06"/>
+	<testcase classname="View_tests.TestView" name="test_reviewed_article_suggestions_page" time="0.002" timestamp="2022-02-06T15:18:06"/>
+</testsuite>
