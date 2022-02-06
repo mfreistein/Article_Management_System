@@ -210,7 +210,6 @@ class Model:
     @staticmethod
     def filter_articles_by_title(requested_title: str, articles: list) -> list:
         """filters for requested title from a list of articles"""
-        #return [article for article in articles if requested_title == article[1]]
         return list(filter(lambda article: article[1] == requested_title, articles))
 
     @staticmethod
@@ -221,19 +220,16 @@ class Model:
         """
         author_ids = cir_db.get_id_from_last_name(requested_author_last_name)
         author_ids = [author_id[0] for author_id in author_ids]
-        #return [article for article in articles if article[3] in author_ids]
         return list(filter(lambda article: article[3] == author_ids, articles))
 
     @staticmethod
     def filter_articles_by_region(requested_region: str, articles: list) -> list:
         """filters for requested region from a list of articles"""
-        #return [article for article in articles if requested_region == article[14]]
         return list(filter(lambda article: article[14] == requested_region, articles))
 
     @staticmethod
     def filter_articles_by_status(requested_status: str, articles: list) -> list:
         """filters for requested status from a list of articles"""
-        #return [article for article in articles if requested_status == article[11]]
         return list(filter(lambda article: article[11] == requested_status, articles))
 
     @staticmethod
@@ -263,17 +259,14 @@ class Model:
     @staticmethod
     def filter_contributors_by_last_name(requested_name: str, contributors: list) -> list:
         """filters for last name from a list of contributors"""
-        #return [contributor for contributor in contributors if contributor[2] == requested_name]
         return list(filter(lambda contributor: contributor[2] == requested_name, contributors))
 
     @staticmethod
     def filter_contributors_by_role(requested_role: str, contributors: list) -> list:
         """filters for role from a list of contributors"""
-        #return [contributor for contributor in contributors if requested_role == contributor[5]]
         return list(filter(lambda contributor: contributor[5] == requested_role, contributors))
 
     @staticmethod
     def filter_contributors_by_institution(requested_institution: str, contributors: list) -> list:
         """filters for institution from a list of contributors"""
-        #return [contributor for contributor in contributors if requested_institution == contributor[4]]
         return list(filter(lambda contributor: contributor[4] == requested_institution, contributors))

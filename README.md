@@ -62,13 +62,13 @@ I tried to apply as many clean code principles as I could. I paid particular att
 
 -Model/View/Controller principle was applied in order to seperate concepts vertically and focus responsibilities on specific issues.
 
--Single responsbility principle was applied to avoid coupling. For example, in the [Model](src/Conception/Model.py) class, there are three seperate functions that each format the particular database information that they receive for console output ([format_articles_in_review_info_for_print](src/Conception/Model.py?plain=1#L186), [format_contributors_info_for_print](src/Conception/Model.py?plain=1#L247), [format_article_suggestions_info_for_print](src/Conception/Model.py?plain=1#L39)). One can get a good overview of this principle in effect in the [Controller Class](src/Conception/Model.py?plain=1#L133), where each step in the requested is treated as a call to a seperate function.
+-Single responsbility principle was applied to avoid coupling. For example, in the [Model](src/Conception/Model.py) class, there are three seperate functions that each format the particular database information that they receive for console output ([format_articles_in_review_info_for_print](src/Conception/Model.py?plain=1#L187), [format_contributors_info_for_print](src/Conception/Model.py?plain=1#L244), [format_article_suggestions_info_for_print](src/Conception/Model.py?plain=1#L40)). One can get a good overview of this principle in effect in the [Controller Class](src/Conception/Controller.py?plain=1#L133), where each step in the requested is treated as a call to a seperate function.
 
 -Explanatory variables were used extensively to improve readability. For example, it is easy to differentiate [unreviewed_article_suggestions](src/Conception/Controller.py?plain=1#L38) to [reviewed_article_suggestions](src/Conception/Controller.py?plain=1#L76).
 
 -DocStrings were also used to improve readability. In combination with some of the pycharm shortcuts, DocStrings were extremely helpful in quickly understanding code I had written previously. [In this case](src/Conception/View.py?plain=1#L197) for example, the reader is immediately given the format the function is receiving the data in. This is particularly helpful as articles in different stages of the review process will carry differnt data.
 
--[Custom Exception Handling Statements](src/Conception/Model.py?plain=1#L99) were created to ease error handling.
+-[Custom Exception Handling Statements](src/Conception/Model.py?plain=1#L100) were created to ease error handling.
 
 
 
@@ -146,9 +146,9 @@ I tried to cover several functional programming principles in the python code:
 
 -Final Data Structures. There are no final data structures in Python, but double underscores (name mangling) were used. Variables in the implemented  [factory pattern method](src/Conception/Datamodel_Article_Conception.py?plain=1#L2) were for example "finalized" in this way.
 
--Higher Order Functions. Several examples for the use of a pure higher order function can be found in the model class where the python [filter functions](src/Conception/Model.py?plain=1#L214) makes use of lambda expressions.
+-Higher Order Functions. Several examples for the use of a pure higher order function can be found in the model class where the python [filter functions](src/Conception/Model.py?plain=1#L213) makes use of lambda expressions.
 
--Anonymous Functions. Python's [lambda expressions](src/Conception/Model.py?plain=1#L266) allow for easy implementation of anonymous functions.
+-Anonymous Functions. Python's [lambda expressions](src/Conception/Model.py?plain=1#L267) allow for easy implementation of anonymous functions.
 
 -Side Effect Free Functions. Side effect free functions were used throughout the code.
 
