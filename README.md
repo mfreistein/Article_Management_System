@@ -62,7 +62,7 @@ I tried to apply as many clean code principles as I could. I paid particular att
 
 -Model/View/Controller principle was applied in order to seperate concepts vertically and focus responsibilities on specific issues.
 
--Single responsbility principle was applied to avoid coupling. For example, in the [Model](src/Conception/Model.py) class, there are three seperate functions that each format the particular database information that they receive for console output ([format_articles_in_review_info_for_print](src/Conception/Model.py?plain=1#L186), [format_contributors_info_for_print](src/Conception/Model.py?plain=1#L243), [format_article_suggestions_info_for_print](src/Conception/Model.py?plain=1#L39)). One can get a good overview of this principle in effect in the [Controller Class](src/Conception/Model.py?plain=1#L133), where each step in the requested is treated as a call to a seperate function.
+-Single responsbility principle was applied to avoid coupling. For example, in the [Model](src/Conception/Model.py) class, there are three seperate functions that each format the particular database information that they receive for console output ([format_articles_in_review_info_for_print](src/Conception/Model.py?plain=1#L186), [format_contributors_info_for_print](src/Conception/Model.py?plain=1#L247), [format_article_suggestions_info_for_print](src/Conception/Model.py?plain=1#L39)). One can get a good overview of this principle in effect in the [Controller Class](src/Conception/Model.py?plain=1#L133), where each step in the requested is treated as a call to a seperate function.
 
 -Explanatory variables were used extensively to improve readability. For example, it is easy to differentiate [unreviewed_article_suggestions](src/Conception/Controller.py?plain=1#L38) to [reviewed_article_suggestions](src/Conception/Controller.py?plain=1#L76).
 
@@ -144,7 +144,7 @@ I tried to cover several functional programming principles in the python code:
 
 -No global variables. All data was stored in an SQL Database, which was made accessible only through side effect free [database functions](src/Databases/Article_Info_Conception.py?plain=1#L12) adhering to the single repsonsiblity principle. 
 
--Final Data Structures. There are no final data structures in Python, but double underscores (name mangling) were used. Variables in the implemented  factory pattern method (src/Conception/Datamodel_Article_Conception.py?plain=1#L2) were for example "finalized" in this way.
+-Final Data Structures. There are no final data structures in Python, but double underscores (name mangling) were used. Variables in the implemented  [factory pattern method](src/Conception/Datamodel_Article_Conception.py?plain=1#L2) were for example "finalized" in this way.
 
 -Higher Order Functions. Several examples for the use of a pure higher order function can be found in the model class where the python [filter functions](src/Conception/Model.py?plain=1#L213) makes use of lambda expressions.
 
