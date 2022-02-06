@@ -148,7 +148,7 @@ class Controller():
             self.controller_articles_review_page()
         elif user_decision == "3":
             requested_author_last_name = input(str("Please input a person by last name: "))
-            filtered_articles = self.model.filter_articles_by_author(requested_author_last_name, articles_in_review)
+            filtered_articles = self.model.filter_articles_by_author_last_name(requested_author_last_name, articles_in_review)
             self.view.print_all_articles_review_information(
                 self.model.format_articles_in_review_info_for_print(filtered_articles))
             self.controller_articles_review_page()
