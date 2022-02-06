@@ -146,7 +146,7 @@ I tried to cover several functional programming principles in the python code:
 
 -Final Data Structures. There are no final data structures in Python, but double underscores (name mangling) were used. Variables in the implemented  [factory pattern method](src/Conception/Datamodel_Article_Conception.py?plain=1#L2) were for example "finalized" in this way.
 
--Higher Order Functions. Several examples for the use of a pure higher order function can be found in the model class where the python [filter functions](src/Conception/Model.py?plain=1#L213) makes use of lambda expressions.
+-Higher Order Functions. Several examples for the use of a pure higher order function can be found in the model class where the python [filter functions](src/Conception/Model.py?plain=1#L214) makes use of lambda expressions.
 
 -Anonymous Functions. Python's [lambda expressions](src/Conception/Model.py?plain=1#L266) allow for easy implementation of anonymous functions.
 
