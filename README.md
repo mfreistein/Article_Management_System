@@ -24,18 +24,18 @@ Lastly, the system assists a group of professional layout editors in preparing r
 
 ## 1. Git
 
-This is my first own Git project. I installed Git, generated a project token and was able to set up a remote Github repository. I added a [.gitignore](.gitignore) file and was able to set up Github Actions. I got acquainted with commits as well as push and pull requests. I created new branches and occasionaly ran into trouble with unstaged changes which I fixed with rebase and stash commands. I was able to reset to previous stages of my project. 
+I installed Git, generated a project token and was able to set up a remote Github repository. I added a [.gitignore](.gitignore) file and was able to set up Github Actions. I got acquainted with commits as well as push and pull requests. I created new branches and occasionaly ran into trouble with unstaged changes which I fixed with rebase and stash commands. I was able to reset to previous stages of my project. 
 
 
 ## 2. UML 
 
 I created 4 UML diagrams to help in the design and ordering process of the project. The UML diagrams can be found in the [Diagrams folder](Aufgaben/Diagrams).
  
- -The class diagram of the system's architecture was a helpful tool in implementing the Model/View/Controller Principle including databases that I chose to use: [Model_View_Controller_Architecture_Article Conception_AMS](Aufgaben/Diagrams/UML/Model_View_Controller_Architecture_Article_Conception_AMS.jpg)
+ -The class diagram of the system's architecture was a helpful tool in implementing the Model/View/Controller Principle including databases: [Model_View_Controller_Architecture_Article Conception_AMS](Aufgaben/Diagrams/UML/Model_View_Controller_Architecture_Article_Conception_AMS.jpg)
 
--The state diagram allows for a more detailed understanding of the editorial workflow process and how it can be reproduced digitally. This is something that would have been produced in close consultation with the editors who will actually be using the project: [State_Diagram_Review_Management_Workflow_AMS](Aufgaben/Diagrams/UML/State_Diagram_Review_Management_Workflow_AMS.jpg)
+-The state diagram allows for a more detailed understanding of the editorial workflow process and how it can be reproduced digitally. This is something that would have been produced in close consultation with the editors who would actually be working with the system: [State_Diagram_Review_Management_Workflow_AMS](Aufgaben/Diagrams/UML/State_Diagram_Review_Management_Workflow_AMS.jpg)
 
--I also included a class diagram of the basic components of my SQL Database which includes the basic structure of article suggestions and the users who suggest/manipulate them: [Class_Diagram_SQL_Databases_Article_Conception_AMS](Aufgaben/Diagrams/UML/Class_Diagram_SQL_Databases_Article_Conception_AMS.jpg)
+-I also included a class diagram of the basic components of my SQL Database which includes the basic structure of article suggestions and shows how the users can suggest/manipulate them: [Class_Diagram_SQL_Databases_Article_Conception_AMS](Aufgaben/Diagrams/UML/Class_Diagram_SQL_Databases_Article_Conception_AMS.jpg)
 
 -Finally, I created a Bounded Contexts Diagram which helped me structure the project as a whole: [Bounded Contexts Diagram](Aufgaben/Diagrams/DDD/Bounded_Contexts_Diagram_AMS.jpg)
 
@@ -46,7 +46,7 @@ I created 4 UML diagrams to help in the design and ordering process of the proje
 
 The DDD diagram can be found in the [DDD folder](Aufgaben/Diagrams/DDD): 
 
--There are several bounded contexts involved in this project, which I was able to seperate during the design of the [Bounded Contexts Diagram](Aufgaben/Diagrams/DDD/Bounded_Contexts_Diagram_AMS.jpg). General Editors, Managing Editors, Authors, Reviewers and Layout Editors each work seperately from each other and have different responsibilites. These responsibilities are reflected in structure of the code. Necessary interaction between these bounded contexts occurs via a published language in the case of the Authors and Reviwers interacting with the Managing Editors during the review process. This is especially important considering that the review process is blind and reviewers and authors need to be kept anonymous. A downstream Supplier/Customer relationship is necessary during the process of the article moving from its conception phase to the review phase as well as from the review phase to the layout editing phase. Certain changes will have to take place during this process, but the basic information of the article is set during the conception and only added to during the review phase. Same principle applies to the layout editing phase.
+There are several bounded contexts involved in this project, which I was able to seperate during the design of the [Bounded Contexts Diagram](Aufgaben/Diagrams/DDD/Bounded_Contexts_Diagram_AMS.jpg). General Editors, Managing Editors, Authors, Reviewers and Layout Editors each work seperately from each other and have different responsibilites. These responsibilities are reflected in structure of the code. Necessary interaction between these bounded contexts occurs via a published language in the case of the Authors and Reviwers interacting with the Managing Editors during the review process. This is especially important considering that the review process is blind and reviewers and authors need to be kept anonymous. A downstream Supplier/Customer relationship is necessary during the process of the article moving from its conception phase to the review phase as well as from the review phase to the layout editing phase. Certain changes will have to take place during this process, but the basic information of the article is set during the conception and only added to during the review phase. Same principle applies to the layout editing phase.
 
 
 
